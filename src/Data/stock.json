@@ -1,0 +1,363 @@
+[
+  {
+    "name": "Dr. Seuss x Forum Low 'The Grinch'",
+    "displayImageURL": "/trainers/1/display.svg",
+    "galleryImages": [
+      "/trainers/1/display.svg",
+      "/trainers/1/1.svg",
+      "/trainers/1/2.svg",
+      "/trainers/1/3.svg"
+    ],
+    "price": "140.00",
+    "description": "The Dr. Seuss x Forum Low 'The Grinch' sneaker brings the beloved character to life with vibrant green colors and whimsical details. Inspired by the classic tale, this collaboration captures the essence of the Grinch's mischievous spirit in every step.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 11,
+    "gender": "male",
+    "id": 1,
+    "featured": false,
+    "brand": "Adidas"
+  },
+  {
+    "name": "Bad Bunny x adidas Forum Buckle Low “Blue Tint”",
+    "displayImageURL": "/trainers/2/display.svg",
+    "galleryImages": [
+      "/trainers/2/display.svg",
+      "/trainers/2/1.svg",
+      "/trainers/2/2.svg",
+      "/trainers/2/3.svg"
+    ],
+    "price": "280.00",
+    "description": "The Bad Bunny x adidas Forum Buckle Low “Blue Tint” combines the rapper's bold style with adidas' iconic design. Featuring a sleek blue tint colorway with signature details, this collaboration is a must-have for sneaker enthusiasts and music fans alike.",
+
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 11,
+    "gender": "male",
+    "id": 2,
+    "featured": false,
+    "brand": "Adidas"
+  },
+  {
+    "name": "Air Jordan 1 Retro High OG 'Chicago Lost & Found'",
+    "displayImageURL": "/trainers/3/display.svg",
+    "galleryImages": [
+      "/trainers/3/display.svg",
+      "/trainers/3/1.svg",
+      "/trainers/3/2.svg",
+      "/trainers/3/3.svg"
+    ],
+    "price": "349.00",
+    "description": "Reviving heritage, the Air Jordan 1 Retro High OG 'Chicago Lost & Found' features a distressed design, capturing the essence of vintage Chicago with modern craftsmanship.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 9,
+    "gender": "male",
+    "id": 3,
+    "featured": true,
+    "brand": "Nike"
+  },
+  {
+    "name": "Jordan Jumpman Jack TR 'Sail'",
+    "displayImageURL": "/trainers/4/display.svg",
+    "galleryImages": [
+      "/trainers/4/display.svg",
+      "/trainers/4/1.svg",
+      "/trainers/4/2.svg",
+      "/trainers/4/3.svg"
+    ],
+    "price": "2080.00",
+    "description": "The Jordan Jumpman Jack TR 'Sail' combines retro style with modern performance. Its sleek design features a sail-colored upper with Jumpman branding, offering both comfort and style.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 5,
+    "gender": "female",
+    "id": 4,
+    "featured": true,
+    "brand": "Nike"
+  },
+  {
+    "name": "Daniel Arsham x Futurecraft 4D 'Aero Green'",
+    "displayImageURL": "/trainers/5/display.svg",
+    "galleryImages": [
+      "/trainers/5/display.svg",
+      "/trainers/5/1.svg",
+      "/trainers/5/2.svg",
+      "/trainers/5/3.svg"
+    ],
+    "price": "1800.00",
+    "description": "The Daniel Arsham x Futurecraft 4D 'Aero Green' merges artistry with innovation, featuring a futuristic design by the renowned artist. With its Aero Green colorway and cutting-edge Futurecraft 4D technology, this sneaker exemplifies the intersection of style and technology, setting new standards in footwear.",
+    "materials": ["Primeknit", "Carbon", "Rubber"],
+    "size": 9,
+    "gender": "male",
+    "id": 5,
+    "featured": false,
+    "brand": "Adidas"
+  },
+  {
+    "name": "Concepts x Nike SB Dunk Low “Orange Lobster”",
+    "displayImageURL": "/trainers/6/display.svg",
+    "galleryImages": [
+      "/trainers/6/display.svg",
+      "/trainers/6/1.svg",
+      "/trainers/6/2.svg",
+      "/trainers/6/3.svg"
+    ],
+    "price": "250.00",
+    "description": "The Concepts x Nike SB Dunk Low “Orange Lobster” celebrates the iconic crustacean with vibrant orange hues and intricate details. Inspired by the New England lobster culture, this limited-edition sneaker is a collector's dream.",
+    "materials": ["Suede", "Textile", "Rubber"],
+    "size": 10,
+    "gender": "male",
+    "id": 6,
+    "featured": false,
+    "brand": "Nike"
+  },
+  {
+    "name": "Adidas The Kobe",
+    "displayImageURL": "/trainers/7/display.svg",
+    "galleryImages": [
+      "/trainers/7/display.svg",
+      "/trainers/7/1.svg",
+      "/trainers/7/2.svg",
+      "/trainers/7/3.svg"
+    ],
+    "price": "950.00",
+    "description": "The Adidas The Kobe pays homage to basketball legend Kobe Bryant with a sleek and minimalist design. Featuring a low-top silhouette and signature details, this iconic sneaker embodies Bryant's relentless drive and determination on the court.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 4,
+    "gender": "female",
+    "id": 7,
+    "featured": true,
+    "brand": "Adidas"
+  },
+  {
+    "name": "9060 'Prism Purple Vibrant Spring'",
+    "displayImageURL": "/trainers/8/display.svg",
+    "galleryImages": [
+      "/trainers/8/display.svg",
+      "/trainers/8/1.svg",
+      "/trainers/8/2.svg",
+      "/trainers/8/3.svg"
+    ],
+    "price": "350.00",
+    "description": "The 9060 'Prism Purple Vibrant Spring' sneaker exudes a playful yet sophisticated vibe with its vibrant purple hues and modern design. Perfect for welcoming the spring season, this shoe adds a pop of color to any outfit, making a bold fashion statement.",
+    "materials": ["Suede", "Textile", "Rubber"],
+    "size": 6,
+    "gender": "female",
+    "id": 8,
+    "featured": false,
+    "brand": "New Balance"
+  },
+  {
+    "name": "Travis Scott x Air Jordan 1 Retro Low OG SP 'Black Phantom'",
+    "displayImageURL": "/trainers/9/display.svg",
+    "galleryImages": [
+      "/trainers/9/display.svg",
+      "/trainers/9/1.svg",
+      "/trainers/9/2.svg",
+      "/trainers/9/3.svg"
+    ],
+    "price": "600.00",
+    "description": "The Travis Scott x Air Jordan 1 Retro Low OG SP 'Black Phantom' combines streetwear flair with classic Jordan design. Featuring a black phantom colorway and Travis Scott's signature details, this collaboration is a coveted addition to any sneaker collection.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 5,
+    "gender": "female",
+    "id": 9,
+    "featured": true,
+    "brand": "Nike"
+  },
+  {
+    "name": "9060 'Beach Glass'",
+    "displayImageURL": "/trainers/10/display.svg",
+    "galleryImages": [
+      "/trainers/10/display.svg",
+      "/trainers/10/1.svg",
+      "/trainers/10/2.svg",
+      "/trainers/10/3.svg"
+    ],
+    "price": "270.00",
+    "description": "The 9060 'Beach Glass' sneaker embodies coastal vibes with its serene color palette and laid-back design. Inspired by the tranquility of beach glass, this shoe exudes a sense of relaxation and style, making it perfect for leisurely strolls or casual outings.",
+    "materials": ["Canvas", "Textile", "Rubber"],
+    "size": 11,
+    "gender": "male",
+    "id": 10,
+    "featured": false,
+    "brand": "New Balance"
+  },
+  {
+    "name": "Joe Freshgoods x 993 Made in USA 'Performance Art - Arctic Blue'",
+    "displayImageURL": "/trainers/11/display.svg",
+    "galleryImages": [
+      "/trainers/11/display.svg",
+      "/trainers/11/1.svg",
+      "/trainers/11/2.svg",
+      "/trainers/11/3.svg"
+    ],
+    "price": "250.00",
+    "description": "The Joe Freshgoods x New Balance 993 Performance Art Pack is a fusion of urban style and athletic performance. Designed by the renowned streetwear artist, this collaboration showcases vibrant colors and unique patterns, making it a statement piece for sneaker collectors.",
+    "materials": ["Suede", "Mesh", "Rubber"],
+    "size": 9,
+    "gender": "male",
+    "id": 11,
+    "featured": true,
+    "brand": "New Balance"
+  },
+  {
+    "name": "Dunk Low 'Jackie Robinson'",
+    "displayImageURL": "/trainers/12/display.svg",
+    "galleryImages": [
+      "/trainers/12/display.svg",
+      "/trainers/12/1.svg",
+      "/trainers/12/2.svg",
+      "/trainers/12/3.svg"
+    ],
+    "price": "380.00",
+    "description": "The Dunk Low 'Jackie Robinson' pays tribute to the baseball legend with its iconic design and historical significance. Featuring classic Dunk styling and special Jackie Robinson branding, this sneaker commemorates his pioneering legacy both on and off the field.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 5,
+    "gender": "female",
+    "id": 12,
+    "featured": false,
+    "brand": "Nike"
+  },
+  {
+    "name": "Air Jordan 4 Retro 'Military Black'",
+    "displayImageURL": "/trainers/13/display.svg",
+    "galleryImages": [
+      "/trainers/13/display.svg",
+      "/trainers/13/1.svg",
+      "/trainers/13/2.svg",
+      "/trainers/13/3.svg"
+    ],
+    "price": "660.00",
+    "description": "The Air Jordan 4 Retro 'Military Black' combines classic Jordan style with a sleek, militaristic twist. Featuring a black colorway with subtle military-inspired details, this iconic sneaker exudes a sense of strength and sophistication, making it a must-have for any sneaker enthusiast.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 5,
+    "gender": "female",
+    "id": 13,
+    "featured": true,
+    "brand": "Nike"
+  },
+  {
+    "name": "Air Jordan 1 High ‘85 “Georgetown”",
+    "displayImageURL": "/trainers/14/display.svg",
+    "galleryImages": [
+      "/trainers/14/display.svg",
+      "/trainers/14/1.svg",
+      "/trainers/14/2.svg",
+      "/trainers/14/3.svg"
+    ],
+    "price": "180.00",
+    "description": "The Air Jordan 1 High ‘85 “Georgetown” pays homage to the iconic basketball program with its classic design and university-inspired colorway. Featuring Georgetown's signature hues and premium materials, this sneaker captures the spirit of the Hoyas, making it a coveted addition to any collection.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 7,
+    "gender": "female",
+    "id": 14,
+    "featured": false,
+    "brand": "Nike"
+  },
+  {
+    "name": "Yeezy Boost 750 'Grey Gum'",
+    "displayImageURL": "/trainers/15/display.svg",
+    "galleryImages": [
+      "/trainers/15/display.svg",
+      "/trainers/15/1.svg",
+      "/trainers/15/2.svg",
+      "/trainers/15/3.svg"
+    ],
+    "price": "1200.00",
+    "description": "The Yeezy Boost 750 'Grey Gum' showcases Kanye West's unique aesthetic with its distinctive silhouette and understated color palette. Featuring a premium suede upper and a gum rubber outsole, this iconic sneaker offers both style and comfort, making it a sought-after choice for sneakerheads worldwide.",
+    "materials": ["Suede", "Textile", "Rubber"],
+    "size": 8,
+    "gender": "female",
+    "id": 15,
+    "featured": false,
+    "brand": "Adidas"
+  },
+  {
+    "name": "Comme des Garçons Homme x 1906R 'White Black'",
+    "displayImageURL": "/trainers/16/display.svg",
+    "galleryImages": [
+      "/trainers/16/display.svg",
+      "/trainers/16/1.svg",
+      "/trainers/16/2.svg",
+      "/trainers/16/3.svg"
+    ],
+    "price": "410",
+    "description": "The Comme des Garçons Homme x 1906R 'White Black' collaboration redefines contemporary style with its minimalist design and avant-garde approach. Featuring a clean white upper with bold black accents, this sneaker exudes sophistication and fashion-forward elegance.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 11,
+    "gender": "male",
+    "id": 16,
+    "featured": true,
+    "brand": "New Balance"
+  },
+  {
+    "name": "Zion Williamson x Air Jordan 1 Retro Low OG 'Voodoo'",
+    "displayImageURL": "/trainers/17/display.svg",
+    "galleryImages": [
+      "/trainers/17/display.svg",
+      "/trainers/17/1.svg",
+      "/trainers/17/2.svg",
+      "/trainers/17/3.svg"
+    ],
+    "price": "530",
+    "description": "The Zion Williamson x Air Jordan 1 Retro Low OG 'Voodoo' pays homage to the basketball prodigy's electrifying style with a vibrant color scheme and unique design details. Featuring bold voodoo-inspired graphics and premium materials, this collaboration captures Zion's dynamic energy on and off the court.",
+    "materials": ["Leather", "Textile", "Rubber"],
+    "size": 8,
+    "gender": "female",
+    "id": 17,
+    "featured": true,
+    "brand": "Nike"
+  },
+  {
+    "name": "Adidas ZX 1000c",
+    "displayImageURL": "/trainers/18/display.svg",
+    "galleryImages": [
+      "/trainers/18/display.svg",
+      "/trainers/18/1.svg",
+      "/trainers/18/2.svg",
+      "/trainers/18/3.svg"
+    ],
+    "price": "220",
+    "description": "The Adidas ZX 1000c blends retro style with modern comfort, featuring a classic silhouette and contemporary updates. With a combination of suede, mesh, and rubber materials, this sneaker offers both durability and breathability, making it a versatile choice for everyday wear.",
+    "materials": ["Suede", "Mesh", "Rubber"],
+    "size": 7,
+    "gender": "female",
+    "id": 18,
+    "featured": false,
+    "brand": "Adidas"
+  },
+  {
+    "name": "DTLR x 9060 'Fire Sign'",
+    "displayImageURL": "/trainers/19/display.svg",
+    "galleryImages": [
+      "/trainers/19/display.svg",
+      "/trainers/19/1.svg",
+      "/trainers/19/2.svg",
+      "/trainers/19/3.svg"
+    ],
+    "price": "270",
+    "description": "The DTLR x 9060 'Fire Sign' ignites passion with its fiery colorway and bold design. Crafted with premium suede and leather, this collaboration embodies strength and style, making it a standout choice for those who dare to make a statement.",
+    "materials": ["Suede", "Leather", "Rubber"],
+    "size": 10,
+    "gender": "male",
+    "id": 19,
+    "featured": false,
+    "brand": "New Balance"
+  },
+  {
+    "name": "Bodega x 9060 'Age of Discovery'",
+    "displayImageURL": "/trainers/20/display.svg",
+    "galleryImages": [
+      "/trainers/20/display.svg",
+      "/trainers/20/1.svg",
+      "/trainers/20/2.svg",
+      "/trainers/20/3.svg"
+    ],
+    "price": "300",
+    "description": "The Bodega x 9060 'Age of Discovery' pays homage to exploration and adventure with its rugged yet refined design. Featuring premium materials like leather and suede, this collaboration evokes a sense of discovery and curiosity, making it a standout addition to any sneaker collection.",
+    "materials": ["Leather", "Suede", "Rubber"],
+    "size": 5,
+    "gender": "female",
+    "id": 20,
+    "featured": false,
+    "brand": "New Balance"
+  }
+]

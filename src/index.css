@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SairaExtraCondensed";
+  src: url("./assets/fonts/SairaExtraCondensed-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+}
+
+@font-face {
+  font-family: "SairaExtraCondensed";
+  src: url("./assets/fonts/SairaExtraCondensed-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+}
+
+@font-face {
+  font-family: "SairaExtraCondensed";
+  src: url("./assets/fonts/SairaExtraCondensed-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+}
+
+@font-face {
+  font-family: "SairaExtraCondensed";
+  src: url("./assets/fonts/SairaExtraCondensed-Regular.ttf") format("truetype");
+  font-weight: 400; /* Medium */
+}
+
+@font-face {
+  font-family: "SairaExtraCondensed";
+  src: url("./assets/fonts/SairaExtraCondensed-Light.ttf") format("truetype");
+  font-weight: 300; /* Medium */
+}
