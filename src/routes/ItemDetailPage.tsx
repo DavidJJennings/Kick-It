@@ -60,10 +60,17 @@ const ItemDetailPage = () => {
           <h3 className="font-bold">Size : {product.size}</h3>
           <ul className="list-disc list-inside">
             <h3 className="font-bold ">Materials</h3>
-            {product.materials.map((material) => {
-              return <li className="font-light ">{material}</li>;
+            {product.materials.map((material, index) => {
+              return (
+                <li key={`${product.id}.${index}`} className="font-light ">
+                  {material}
+                </li>
+              );
             })}
           </ul>{" "}
+          <div className="flex justify-center font-bold text-3xl">
+            {product.price ? `£${product.price}` : "N/A"}
+          </div>
           <AddToBasketBtn></AddToBasketBtn>
         </div>
       </section>
