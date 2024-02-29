@@ -5,6 +5,27 @@ import AddToBasketBtn from "./AddToBasketBtn";
 type props = {
   sort: string;
   setsort: React.Dispatch<React.SetStateAction<string>>;
+  filter: boolean;
+  setFilter: React.Dispatch<React.SetStateAction<boolean>>;
+  products: typeof stock;
+  setProducts: React.Dispatch<
+    React.SetStateAction<
+      {
+        name: string;
+        displayImageURL: string;
+        galleryImages: string[];
+        price: number;
+        description: string;
+        materials: string[];
+        size: number;
+        gender: string;
+        id: number;
+        featured: boolean;
+        brand: string;
+        sale: boolean;
+      }[]
+    >
+  >;
 };
 
 const AllProductsGallery = (props: props) => {

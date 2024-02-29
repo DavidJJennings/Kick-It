@@ -8,6 +8,9 @@ export default {
       aspectRatio: {
         "33/20": "33 / 20",
       },
+      colors: {
+        "petrol-light": "rgba(190, 200, 210, 0.4)",
+      },
     },
   },
   plugins: [],

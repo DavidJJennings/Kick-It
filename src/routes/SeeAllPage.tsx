@@ -4,12 +4,14 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useState } from "react";
 import FilterModal from "../components/FilterModal";
+import stock from "../Data/stock.json";
 
 const SeeAllPage = () => {
   const [sort, setsort] = useState("none");
 
   const [filter, setFilter] = useState(false);
-  const props = { sort, setsort, filter, setFilter };
+  const [products, setProducts] = useState(stock);
+  const props = { sort, setsort, filter, setFilter, products, setProducts };
 
   return (
     <section>
