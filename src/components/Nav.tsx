@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { BasketContext } from "../Contexts/BasketContext";
+import { useContext } from "react";
 
 const Nav = () => {
   const location = useLocation();
@@ -10,6 +12,7 @@ const Nav = () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else null;
   };
+  const { basket } = useContext(BasketContext);
 
   return (
     <nav className="grid grid-cols-3 grid-rows-1 bg-black p-8 w-full font-bold fixed top-0 left-0 z-10">
@@ -48,7 +51,21 @@ const Nav = () => {
       </ul>
 
       <div className="flex col-span-1 justify-end items-end hover:cursor-pointer gap-x-10">
-        <img className="h-[35px]" src="/Shopping-Basket-Icon.svg" alt="" />
+        <Link to="/checkout">
+          <div className="relative">
+            <img
+              className="h-[35px]"
+              src="/Shopping-Basket-Icon.svg"
+              alt="Basket"
+            />
+            {basket.length > 0 && (
+              <div className="absolute -right-4 -top-3 text-white bg-[#21D585] rounded-full  h-8 w-8 box-border text-2xl flex items-center justify-center">
+                {basket.length}
+              </div>
+            )}
+          </div>
+        </Link>
+
         <img
           className="h-[30px]"
           src="/Header-Menu-Btn.svg"

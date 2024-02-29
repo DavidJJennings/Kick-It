@@ -14,9 +14,21 @@ const SaleProductsGallery = () => {
           const formattedPrice = trainer.price.toFixed(2);
           const origPrice = trainer.price * 1.1;
           const formattedOrigPrice = origPrice.toFixed(2);
-
+          const buttonProps = { trainer };
           return (
-            <Link key={trainer.id} to={`/item/${trainer.id}`}>
+            <Link
+              onClick={(e) => {
+                if (
+                  (e.target as HTMLElement).tagName.toLowerCase() === "img" &&
+                  (e.target as HTMLElement).getAttribute("src") ===
+                    "/Add-ToBasket-Btn.svg"
+                ) {
+                  e.preventDefault();
+                }
+              }}
+              key={trainer.id}
+              to={`/item/${trainer.id}`}
+            >
               <div className="flex flex-col justify-between text-center items-center gap-y-4 mx-auto mb-4 h-96 w-64">
                 <img
                   className="w-full"
@@ -49,7 +61,7 @@ const SaleProductsGallery = () => {
                   </div>
                 )}
 
-                <AddToBasketBtn></AddToBasketBtn>
+                <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
               </div>
             </Link>
           );

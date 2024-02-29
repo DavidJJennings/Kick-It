@@ -14,6 +14,7 @@ const ItemDetailPage = () => {
 
   const numericItemId = parseInt(itemId, 10);
   const trainer = stock.filter((trainer) => trainer.id == numericItemId)[0];
+  const buttonProps = { trainer };
   const formattedPrice = trainer.price.toFixed(2);
   const salePrice = trainer.price * 0.9;
   const formattedSalePrice = salePrice.toFixed(2);
@@ -82,7 +83,7 @@ const ItemDetailPage = () => {
               <h2>N/A</h2>
             )}
           </div>
-          <AddToBasketBtn></AddToBasketBtn>
+          <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
         </div>
       </section>
     </div>

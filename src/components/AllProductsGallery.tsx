@@ -13,12 +13,25 @@ const AllProductsGallery = (props: props) => {
   return (
     <div className="grid grid-cols-4 gap-y-20 gap-x-6 px-6">
       {products.map((trainer) => {
+        const buttonProps = { trainer };
         const formattedPrice = trainer.price.toFixed(2);
         const origPrice = trainer.price * 1.2;
         const formattedOrigPrice = origPrice.toFixed(2);
 
         return (
-          <Link key={trainer.id} to={`/item/${trainer.id}`}>
+          <Link
+            onClick={(e) => {
+              if (
+                (e.target as HTMLElement).tagName.toLowerCase() === "img" &&
+                (e.target as HTMLElement).getAttribute("src") ===
+                  "/Add-ToBasket-Btn.svg"
+              ) {
+                e.preventDefault();
+              }
+            }}
+            key={trainer.id}
+            to={`/item/${trainer.id}`}
+          >
             <div className="flex flex-col justify-between text-center items-center gap-y-4 mx-auto mb-4 h-96 w-64">
               <img
                 className="w-full"
@@ -51,7 +64,7 @@ const AllProductsGallery = (props: props) => {
                 </div>
               )}
 
-              <AddToBasketBtn></AddToBasketBtn>
+              <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
             </div>
           </Link>
         );

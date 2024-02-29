@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import SalePage from "./routes/SalePage";
 import MenPage from "./routes/MenPage";
 import WomenPage from "./routes/WomenPage";
+import Checkout from "./routes/Checkout";
 
 export default function App() {
   function ScrollToTop() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/sale" element={<SalePage />} />
           <Route path="/men" element={<MenPage />} />
           <Route path="/women" element={<WomenPage />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </Router>
     </main>

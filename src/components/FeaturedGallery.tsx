@@ -33,8 +33,21 @@ const FeaturedGallery = () => {
       <div className="grid grid-cols-4 grid-rows-2 gap-y-16 gap-x-6 pt-5 mt-8 px-6">
         {featuredTrainers.map((trainer: Trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
+          const buttonProps = { trainer };
           return (
-            <Link key={trainer.id} to={`/item/${trainer.id}`}>
+            <Link
+              onClick={(e) => {
+                if (
+                  (e.target as HTMLElement).tagName.toLowerCase() === "img" &&
+                  (e.target as HTMLElement).getAttribute("src") ===
+                    "/Add-ToBasket-Btn.svg"
+                ) {
+                  e.preventDefault();
+                }
+              }}
+              key={trainer.id}
+              to={`/item/${trainer.id}`}
+            >
               <div className="flex flex-col justify-between text-center items-center gap-y-4 mb-4 h-96 w-64 mx-auto">
                 <img
                   className="h-[150px]"
@@ -47,7 +60,7 @@ const FeaturedGallery = () => {
                 </div>
 
                 <span>{trainer.price ? `£${formattedPrice}` : "N/A"}</span>
-                <AddToBasketBtn></AddToBasketBtn>
+                <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
               </div>
             </Link>
           );
