@@ -5,17 +5,28 @@ import Nav from "../components/Nav";
 import { useState } from "react";
 import FilterModal from "../components/FilterModal";
 import stock from "../Data/stock.json";
+import LoadingModal from "../components/LoadingModal";
 
 const SeeAllPage = () => {
-  const [sort, setsort] = useState("none");
-
   const [filter, setFilter] = useState(false);
   const [products, setProducts] = useState(stock);
-  const props = { sort, setsort, filter, setFilter, products, setProducts };
+  const [loading, setLoading] = useState(false);
+  const [isFiltered, setIsFiltered] = useState(false);
+
+  const props = {
+    filter,
+    setFilter,
+    products,
+    setProducts,
+    setLoading,
+    isFiltered,
+    setIsFiltered,
+  };
 
   return (
     <section>
       {filter && <FilterModal {...props} />}
+      {loading && <LoadingModal />}
       <Nav></Nav>
       <SortProducts {...props}></SortProducts>
       <AllProductsGallery {...props}></AllProductsGallery>

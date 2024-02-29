@@ -3,51 +3,16 @@ import { Link } from "react-router-dom";
 import AddToBasketBtn from "./AddToBasketBtn";
 
 type props = {
-  sort: string;
-  setsort: React.Dispatch<React.SetStateAction<string>>;
-  filter: boolean;
-  setFilter: React.Dispatch<React.SetStateAction<boolean>>;
   products: typeof stock;
-  setProducts: React.Dispatch<
-    React.SetStateAction<
-      {
-        name: string;
-        displayImageURL: string;
-        galleryImages: string[];
-        price: number;
-        description: string;
-        materials: string[];
-        size: number;
-        gender: string;
-        id: number;
-        featured: boolean;
-        brand: string;
-        sale: boolean;
-      }[]
-    >
-  >;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const AllProductsGallery = (props: props) => {
-  const { sort } = props;
-  const stockAZ = [...stock].sort((a, b) => a.name.localeCompare(b.name));
-  const stockPriceDesc = [...stock].sort((a, b) => b.price - a.price);
-  const stockPriceAsc = [...stock].sort((a, b) => a.price - b.price);
-
-  const stockToMap =
-    sort === "none"
-      ? stock
-      : sort === "A-Z"
-      ? stockAZ
-      : sort === "high-low"
-      ? stockPriceDesc
-      : sort === "low-high"
-      ? stockPriceAsc
-      : stock;
+  const { products } = props;
 
   return (
-    <div className="grid grid-cols-4 grid-rows-5 gap-y-20 gap-x-6 px-6">
-      {stockToMap.map((trainer) => {
+    <div className="grid grid-cols-4 gap-y-20 gap-x-6 px-6">
+      {products.map((trainer) => {
         const formattedPrice = trainer.price.toFixed(2);
         const origPrice = trainer.price * 1.2;
         const formattedOrigPrice = origPrice.toFixed(2);

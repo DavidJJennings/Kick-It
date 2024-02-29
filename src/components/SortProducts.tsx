@@ -1,14 +1,56 @@
+import stock from "../Data/stock.json";
+
 type props = {
-  sort: string;
-  setsort: React.Dispatch<React.SetStateAction<string>>;
   filter: boolean;
   setFilter: React.Dispatch<React.SetStateAction<boolean>>;
+  products: typeof stock;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+
+  setProducts: React.Dispatch<
+    React.SetStateAction<
+      {
+        name: string;
+        displayImageURL: string;
+        galleryImages: string[];
+        price: number;
+        description: string;
+        materials: string[];
+        size: number;
+        gender: string;
+        id: number;
+        featured: boolean;
+        brand: string;
+        sale: boolean;
+      }[]
+    >
+  >;
+  isFiltered: boolean;
+  setIsFiltered: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const SortProducts = (props: props) => {
-  const { setsort, filter, setFilter } = props;
+  const {
+    filter,
+    setFilter,
+    setProducts,
+    products,
+    isFiltered,
+    setIsFiltered,
+    setLoading,
+  } = props;
+  const stockAZ = [...products].sort((a, b) => a.name.localeCompare(b.name));
+  const stockPriceDesc = [...products].sort((a, b) => b.price - a.price);
+  const stockPriceAsc = [...products].sort((a, b) => a.price - b.price);
   const handleClick = () => {
     setFilter(!filter);
+  };
+
+  const handleClear = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+    e.preventDefault();
+    setLoading(true);
+    setIsFiltered(false);
+    setProducts(stock);
+    setLoading(false);
   };
 
   return (
@@ -19,7 +61,15 @@ const SortProducts = (props: props) => {
           <select
             onChange={(e) => {
               const selectedsort = e.target.value;
-              setsort(selectedsort);
+              if (selectedsort === "A-Z") {
+                setProducts(stockAZ);
+              } else if (selectedsort === "high-low") {
+                setProducts(stockPriceDesc);
+              } else if (selectedsort === "low-high") {
+                setProducts(stockPriceAsc);
+              } else {
+                setProducts(products);
+              }
             }}
             className=" border-2 border-black text-center cursor-pointer"
           >
@@ -29,12 +79,21 @@ const SortProducts = (props: props) => {
             <option value="low-high">Price: Low-High</option>
           </select>
         </div>
-        <img
-          onClick={handleClick}
-          className="w-[150px] hover:opacity-65 cursor-pointer"
-          src="Filter-Button.svg"
-          alt="filter"
-        />
+        {isFiltered ? (
+          <img
+            onClick={(e) => handleClear(e)}
+            className="w-[150px] hover:opacity-65 cursor-pointer"
+            src="Clear-Filter-Button.svg"
+            alt="filter"
+          />
+        ) : (
+          <img
+            onClick={handleClick}
+            className="w-[150px] hover:opacity-65 cursor-pointer"
+            src="Filter-Button.svg"
+            alt="filter"
+          />
+        )}
       </div>
     </>
   );

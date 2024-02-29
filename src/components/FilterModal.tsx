@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import stock from "../Data/stock.json";
+import { useState } from "react";
 
 type props = {
   filter: boolean;
@@ -23,36 +24,68 @@ type props = {
       }[]
     >
   >;
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsFiltered: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+type data = {
+  brand: string;
+  size: number;
+  sale: boolean;
+  priceMin: number;
+  priceMax: number;
 };
 
 const FilterModal = (props: props) => {
-  const { filter, setFilter, products, setProducts } = props;
+  const [priceRangeError, setPriceRangeError] = useState("");
+  const { filter, setFilter, setProducts, setLoading, setIsFiltered } = props;
   const preventForm = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
     e.stopPropagation();
   };
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     e.preventDefault();
     setFilter(!filter);
   };
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm<data>();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (formData: data) => {
+    const numericData = {
+      ...formData,
+      size: formData.size ? Number(formData.size) : null, // Or keep as 0 or undefined, depending on your logic
+      priceMin: Number(formData.priceMin),
+      priceMax: Number(formData.priceMax),
+    };
 
-    const filteredTrainers = stock.filter((trainer) => {
-      const byBrand = data.brand ? trainer.brand === data.brand : true;
+    const { priceMin, priceMax } = formData;
+    if (priceMin > priceMax) {
+      setPriceRangeError("Minimum price cannot exceed maximum price");
+      return;
+    } else {
+      setPriceRangeError("");
 
-      const bySize = data.size ? trainer.size === data.size : true;
+      setFilter(!filter);
+      setLoading(true);
 
-      const bySale = data.sale ? trainer.sale : true;
+      const filteredTrainers = stock.filter((trainer) => {
+        const byBrand = numericData.brand
+          ? trainer.brand === numericData.brand
+          : true;
+        const bySize = numericData.size
+          ? trainer.size === numericData.size
+          : true;
+        const bySale = numericData.sale ? trainer.sale : true;
+        const byPrice =
+          trainer.price >= (numericData.priceMin || 0) &&
+          trainer.price <= (numericData.priceMax || Infinity);
 
-      const byPrice =
-        trainer.price >= (data.priceMin || 0) &&
-        trainer.price <= (data.priceMax || Infinity);
+        return byBrand && bySize && bySale && byPrice;
+      });
 
-      return byBrand && bySize && bySale && byPrice;
-    });
+      setProducts(filteredTrainers);
+      setIsFiltered(true);
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,7 +95,7 @@ const FilterModal = (props: props) => {
     >
       <form
         onClick={preventForm}
-        className="flex gap-y-6 flex-col w-1/4 bg-black p-6 absolute left-1/2 -translate-x-1/2 translate-y-1/4"
+        className="flex gap-y-6 flex-col w-1/4 bg-black p-6 fixed left-1/2 -translate-x-1/2 translate-y-[15%]"
         onSubmit={handleSubmit(onSubmit)}
       >
         <select {...register("brand")}>
@@ -89,19 +122,30 @@ const FilterModal = (props: props) => {
         </label>
 
         <label className="text-white flex flex-col">
-          Price Range:
+          Min Price: £{watch("priceMin")}
           <input
-            type="number"
+            className="text-black"
+            type="range"
             {...register("priceMin")}
-            placeholder="Min Price"
-          />{" "}
-          to
-          <input
-            type="number"
-            {...register("priceMax")}
-            placeholder="Max Price"
+            min="0"
+            max="2100"
+            defaultValue="0"
           />
         </label>
+        <label className="text-white flex flex-col">
+          Max Price: £{watch("priceMax")}
+          <input
+            className="text-black"
+            type="range"
+            {...register("priceMax")}
+            min="0"
+            max="2100"
+            defaultValue="0"
+          />
+        </label>
+        {priceRangeError && (
+          <p className=" text-[#FF0800]">{priceRangeError}</p>
+        )}
 
         <button className="text-white border-white border-2 p-1" type="submit">
           Apply Filters
