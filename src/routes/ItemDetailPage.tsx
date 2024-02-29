@@ -13,19 +13,22 @@ const ItemDetailPage = () => {
   }
 
   const numericItemId = parseInt(itemId, 10);
-  const product = stock.filter((product) => product.id == numericItemId)[0];
+  const trainer = stock.filter((trainer) => trainer.id == numericItemId)[0];
+  const formattedPrice = trainer.price.toFixed(2);
+  const salePrice = trainer.price * 0.9;
+  const formattedSalePrice = salePrice.toFixed(2);
 
   const nextImage = (e: React.MouseEvent) => {
     e.preventDefault();
     setImageIndex((prevIndex) =>
-      prevIndex === product.galleryImages.length - 1 ? 0 : prevIndex + 1
+      prevIndex === trainer.galleryImages.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.preventDefault;
     setImageIndex((prevIndex) =>
-      prevIndex === 0 ? product.galleryImages.length - 1 : prevIndex - 1
+      prevIndex === 0 ? trainer.galleryImages.length - 1 : prevIndex - 1
     );
   };
 
@@ -37,7 +40,7 @@ const ItemDetailPage = () => {
           <div className="relative p-8 ">
             <img
               className="object-cover w-full h-full p-16"
-              src={product.galleryImages[imageIndex]}
+              src={trainer.galleryImages[imageIndex]}
               alt="Product Image"
             />
             <img
@@ -55,21 +58,29 @@ const ItemDetailPage = () => {
           </div>
         </div>
         <div className="col-span-4 row-span-2 p-8 ml-4 flex flex-col gap-y-2 text-left justify-between">
-          <h2 className="font-bold text-4xl text-center">{product.name}</h2>
-          <p className=" font-light text-2xl">{product.description}</p>
-          <h3 className="font-bold">Size : {product.size}</h3>
+          <h2 className="font-bold text-4xl text-center">{trainer.name}</h2>
+          <p className=" font-light text-2xl">{trainer.description}</p>
+          <h3 className="font-bold">Size : {trainer.size}</h3>
           <ul className="list-disc list-inside">
             <h3 className="font-bold ">Materials</h3>
-            {product.materials.map((material, index) => {
+            {trainer.materials.map((material, index) => {
               return (
-                <li key={`${product.id}.${index}`} className="font-light ">
+                <li key={`${trainer.id}.${index}`} className="font-light ">
                   {material}
                 </li>
               );
             })}
           </ul>{" "}
           <div className="flex justify-center font-bold text-3xl">
-            {product.price ? `£${product.price}` : "N/A"}
+            {trainer.price ? (
+              trainer.sale ? (
+                <h2 className=" text-red-600">£{formattedSalePrice}</h2>
+              ) : (
+                <h2>£{formattedPrice}</h2>
+              )
+            ) : (
+              <h2>N/A</h2>
+            )}
           </div>
           <AddToBasketBtn></AddToBasketBtn>
         </div>

@@ -4,6 +4,9 @@ import ItemDetailPage from "./routes/ItemDetailPage";
 import SeeAllPage from "./routes/SeeAllPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SalePage from "./routes/SalePage";
+import MenPage from "./routes/MenPage";
+import WomenPage from "./routes/WomenPage";
 
 export default function App() {
   function ScrollToTop() {
@@ -24,6 +27,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/item/:itemId" element={<ItemDetailPage />} />
           <Route path="/seeall" element={<SeeAllPage />} />
+          <Route path="/sale" element={<SalePage />} />
+          <Route path="/men" element={<MenPage />} />
+          <Route path="/women" element={<WomenPage />} />
         </Routes>
       </Router>
     </main>

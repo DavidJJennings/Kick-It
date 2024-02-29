@@ -1,12 +1,16 @@
 type props = {
-  filter: string;
-  setFilter: React.Dispatch<React.SetStateAction<string>>;
+  sort: string;
+  setsort: React.Dispatch<React.SetStateAction<string>>;
+  filter: boolean;
+  setFilter: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-type FilterOptions = "none" | "A-Z" | "Price: High-Low" | "Price: Low-High";
+const SortProducts = (props: props) => {
+  const { setsort, filter, setFilter } = props;
+  const handleClick = () => {
+    setFilter(!filter);
+  };
 
-const FilterProducts = (props: props) => {
-  const { setFilter } = props;
   return (
     <>
       <div className="mt-36 flex justify-end p-8 items-center gap-x-10">
@@ -14,8 +18,8 @@ const FilterProducts = (props: props) => {
           <span>Sort By </span>
           <select
             onChange={(e) => {
-              const selectedFilter = e.target.value;
-              setFilter(selectedFilter);
+              const selectedsort = e.target.value;
+              setsort(selectedsort);
             }}
             className=" border-2 border-black text-center cursor-pointer"
           >
@@ -26,12 +30,13 @@ const FilterProducts = (props: props) => {
           </select>
         </div>
         <img
+          onClick={handleClick}
           className="w-[150px] hover:opacity-65 cursor-pointer"
           src="Filter-Button.svg"
-          alt="Filter"
+          alt="filter"
         />
       </div>
     </>
   );
 };
-export default FilterProducts;
+export default SortProducts;

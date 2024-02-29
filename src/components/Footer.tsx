@@ -5,16 +5,18 @@ const Footer = () => {
         <h3 className="font-bold pb-1">Shopping with Kick It</h3>
         <ul className="font-light">
           <li className="hover:underline">
-            <a href="#">Students</a>
+            <span className="hover:underline cursor-pointer">Students</span>
           </li>
           <li className="hover:underline">
-            <a href="#">Size Guides</a>
+            <span className="hover:underline cursor-pointer">Size Guides</span>
           </li>
           <li className="hover:underline">
-            <a href="#">Find a Store</a>
+            <span className="hover:underline cursor-pointer">Find a Store</span>
           </li>
           <li className="hover:underline">
-            <a href="#">Kick It Status</a>
+            <span className="hover:underline cursor-pointer">
+              Kick It Status
+            </span>
           </li>
         </ul>
       </div>
@@ -23,16 +25,24 @@ const Footer = () => {
         <h3 className="font-bold pb-">Customer Care</h3>
         <ul className="font-light">
           <li className="hover:underline">
-            <a href="#">Delivery & Returns</a>
+            <span className="hover:underline cursor-pointer">
+              Delivery & Returns
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Help & Contact Us</a>
+            <span className="hover:underline cursor-pointer">
+              Help & Contact Us
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Track My Order</a>
+            <span className="hover:underline cursor-pointer">
+              Track My Order
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Waste Electrical or Electronic Equipment</a>
+            <span className="hover:underline cursor-pointer">
+              Waste Electrical or Electronic Equipment
+            </span>
           </li>
         </ul>
       </div>
@@ -41,13 +51,19 @@ const Footer = () => {
         <h3 className="font-bold pb-">Corporate</h3>
         <ul className="font-light">
           <li className="hover:underline">
-            <a href="#">Careers at Kick It</a>
+            <span className="hover:underline cursor-pointer">
+              Careers at Kick It
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Kick It Sports Fashion Plc</a>
+            <span className="hover:underline cursor-pointer">
+              Kick It Sports Fashion Plc
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Sustainability</a>
+            <span className="hover:underline cursor-pointer">
+              Sustainability
+            </span>
           </li>
         </ul>
       </div>
@@ -56,22 +72,32 @@ const Footer = () => {
         <h3 className="font-bold pb-">Legal</h3>
         <ul className="font-light">
           <li className="hover:underline">
-            <a href="#">Terms & Conditions</a>
+            <span className="hover:underline cursor-pointer">
+              Terms & Conditions
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Privacy & Cookies</a>
+            <span className="hover:underline cursor-pointer">
+              Privacy & Cookies
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Accessibility</a>
+            <span className="hover:underline cursor-pointer">
+              Accessibility
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Cookie Settings</a>
+            <span className="hover:underline cursor-pointer">
+              Cookie Settings
+            </span>
           </li>
           <li className="hover:underline">
-            <a href="#">Site Map</a>
+            <span className="hover:underline cursor-pointer">Site Map</span>
           </li>
           <li className="hover:underline">
-            <a href="#">Modern Slavery Report</a>
+            <span className="hover:underline cursor-pointer">
+              Modern Slavery Report
+            </span>
           </li>
         </ul>
       </div>

@@ -1,19 +1,24 @@
 import AllProductsGallery from "../components/AllProductsGallery";
-import FilterProducts from "../components/FilterProducts";
+import SortProducts from "../components/SortProducts";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useState } from "react";
+import FilterModal from "../components/FilterModal";
 
 const SeeAllPage = () => {
-  const [filter, setFilter] = useState("none");
-  const filterProps = { filter, setFilter };
+  const [sort, setsort] = useState("none");
+
+  const [filter, setFilter] = useState(false);
+  const props = { sort, setsort, filter, setFilter };
+
   return (
-    <>
+    <section>
+      {filter && <FilterModal {...props} />}
       <Nav></Nav>
-      <FilterProducts {...filterProps}></FilterProducts>
-      <AllProductsGallery {...filterProps}></AllProductsGallery>
+      <SortProducts {...props}></SortProducts>
+      <AllProductsGallery {...props}></AllProductsGallery>
       <Footer></Footer>
-    </>
+    </section>
   );
 };
 export default SeeAllPage;

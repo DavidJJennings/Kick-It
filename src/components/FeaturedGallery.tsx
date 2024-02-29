@@ -14,12 +14,14 @@ type Trainer = {
   id: number;
   featured: boolean;
   brand: string;
+  sale: boolean;
 };
 
 const FeaturedGallery = () => {
   const featuredTrainers = stock.filter((trainer) => trainer.featured == true);
+
   return (
-    <>
+    <section id="featured-section">
       <div className="flex items-end">
         <img
           className=" ml-10  mt-10 w-[280px]"
@@ -28,12 +30,12 @@ const FeaturedGallery = () => {
         />
       </div>
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-y-16 pt-5 mt-8">
+      <div className="grid grid-cols-4 grid-rows-2 gap-y-16 gap-x-6 pt-5 mt-8 px-6">
         {featuredTrainers.map((trainer: Trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
           return (
             <Link key={trainer.id} to={`/item/${trainer.id}`}>
-              <div className="flex flex-col justify-between text-center items-center gap-y-4 h-full mb-4">
+              <div className="flex flex-col justify-between text-center items-center gap-y-4 mb-4 h-96 w-64 mx-auto">
                 <img
                   className="h-[150px]"
                   src={trainer.displayImageURL || "/Stock-Trainers-Image.svg"}
@@ -55,14 +57,14 @@ const FeaturedGallery = () => {
         <Link to={"seeall"}>
           <button className="group">
             <img
-              className="w-[150px] group-hover:opacity-65"
+              className="w-[200px] group-hover:opacity-65"
               src="/See-All-Button.svg"
               alt="See All"
             />
           </button>
         </Link>
       </div>
-    </>
+    </section>
   );
 };
 export default FeaturedGallery;

@@ -15,11 +15,10 @@
     "gender": "male",
     "id": 1,
     "featured": false,
-    "brand": "Adidas",
-    "sale": false
+    "brand": "Adidas"
   },
   {
-    "name": "Bad Bunny x adidas Forum Buckle Low \u201cBlue Tint\u201d",
+    "name": "Bad Bunny x adidas Forum Buckle Low “Blue Tint”",
     "displayImageURL": "/trainers/2/display.svg",
     "galleryImages": [
       "/trainers/2/display.svg",
@@ -28,14 +27,14 @@
       "/trainers/2/3.svg"
     ],
     "price": 280.0,
-    "description": "The Bad Bunny x adidas Forum Buckle Low \u201cBlue Tint\u201d combines the rapper's bold style with adidas' iconic design. Featuring a sleek blue tint colorway with signature details, this collaboration is a must-have for sneaker enthusiasts and music fans alike.",
+    "description": "The Bad Bunny x adidas Forum Buckle Low “Blue Tint” combines the rapper's bold style with adidas' iconic design. Featuring a sleek blue tint colorway with signature details, this collaboration is a must-have for sneaker enthusiasts and music fans alike.",
+
     "materials": ["Leather", "Textile", "Rubber"],
     "size": 11,
     "gender": "male",
     "id": 2,
     "featured": false,
-    "brand": "Adidas",
-    "sale": true
+    "brand": "Adidas"
   },
   {
     "name": "Air Jordan 1 Retro High OG 'Chicago Lost & Found'",
@@ -53,8 +52,7 @@
     "gender": "male",
     "id": 3,
     "featured": true,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
     "name": "Jordan Jumpman Jack TR 'Sail'",
@@ -72,8 +70,7 @@
     "gender": "female",
     "id": 4,
     "featured": true,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
     "name": "Daniel Arsham x Futurecraft 4D 'Aero Green'",
@@ -91,11 +88,10 @@
     "gender": "male",
     "id": 5,
     "featured": false,
-    "brand": "Adidas",
-    "sale": false
+    "brand": "Adidas"
   },
   {
-    "name": "Concepts x Nike SB Dunk Low \u201cOrange Lobster\u201d",
+    "name": "Concepts x Nike SB Dunk Low “Orange Lobster”",
     "displayImageURL": "/trainers/6/display.svg",
     "galleryImages": [
       "/trainers/6/display.svg",
@@ -104,14 +100,13 @@
       "/trainers/6/3.svg"
     ],
     "price": 250.0,
-    "description": "The Concepts x Nike SB Dunk Low \u201cOrange Lobster\u201d celebrates the iconic crustacean with vibrant orange hues and intricate details. Inspired by the New England lobster culture, this limited-edition sneaker is a collector's dream.",
+    "description": "The Concepts x Nike SB Dunk Low “Orange Lobster” celebrates the iconic crustacean with vibrant orange hues and intricate details. Inspired by the New England lobster culture, this limited-edition sneaker is a collector's dream.",
     "materials": ["Suede", "Textile", "Rubber"],
     "size": 10,
     "gender": "male",
     "id": 6,
     "featured": false,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
     "name": "Adidas The Kobe",
@@ -129,8 +124,7 @@
     "gender": "female",
     "id": 7,
     "featured": true,
-    "brand": "Adidas",
-    "sale": false
+    "brand": "Adidas"
   },
   {
     "name": "9060 'Prism Purple Vibrant Spring'",
@@ -148,8 +142,7 @@
     "gender": "female",
     "id": 8,
     "featured": false,
-    "brand": "New Balance",
-    "sale": false
+    "brand": "New Balance"
   },
   {
     "name": "Travis Scott x Air Jordan 1 Retro Low OG SP 'Black Phantom'",
@@ -167,8 +160,7 @@
     "gender": "female",
     "id": 9,
     "featured": true,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
     "name": "9060 'Beach Glass'",
@@ -186,8 +178,7 @@
     "gender": "male",
     "id": 10,
     "featured": false,
-    "brand": "New Balance",
-    "sale": true
+    "brand": "New Balance"
   },
   {
     "name": "Joe Freshgoods x 993 Made in USA 'Performance Art - Arctic Blue'",
@@ -205,8 +196,7 @@
     "gender": "male",
     "id": 11,
     "featured": true,
-    "brand": "New Balance",
-    "sale": false
+    "brand": "New Balance"
   },
   {
     "name": "Dunk Low 'Jackie Robinson'",
@@ -224,8 +214,7 @@
     "gender": "female",
     "id": 12,
     "featured": false,
-    "brand": "Nike",
-    "sale": true
+    "brand": "Nike"
   },
   {
     "name": "Air Jordan 4 Retro 'Military Black'",
@@ -243,11 +232,10 @@
     "gender": "female",
     "id": 13,
     "featured": true,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
-    "name": "Air Jordan 1 High \u201885 \u201cGeorgetown\u201d",
+    "name": "Air Jordan 1 High ‘85 “Georgetown”",
     "displayImageURL": "/trainers/14/display.svg",
     "galleryImages": [
       "/trainers/14/display.svg",
@@ -256,14 +244,13 @@
       "/trainers/14/3.svg"
     ],
     "price": 180.0,
-    "description": "The Air Jordan 1 High \u201885 \u201cGeorgetown\u201d pays homage to the iconic basketball program with its classic design and university-inspired colorway. Featuring Georgetown's signature hues and premium materials, this sneaker captures the spirit of the Hoyas, making it a coveted addition to any collection.",
+    "description": "The Air Jordan 1 High ‘85 “Georgetown” pays homage to the iconic basketball program with its classic design and university-inspired colorway. Featuring Georgetown's signature hues and premium materials, this sneaker captures the spirit of the Hoyas, making it a coveted addition to any collection.",
     "materials": ["Leather", "Textile", "Rubber"],
     "size": 7,
     "gender": "female",
     "id": 14,
     "featured": false,
-    "brand": "Nike",
-    "sale": true
+    "brand": "Nike"
   },
   {
     "name": "Yeezy Boost 750 'Grey Gum'",
@@ -281,11 +268,10 @@
     "gender": "female",
     "id": 15,
     "featured": false,
-    "brand": "Adidas",
-    "sale": true
+    "brand": "Adidas"
   },
   {
-    "name": "Comme des Gar\u00e7ons Homme x 1906R 'White Black'",
+    "name": "Comme des Garçons Homme x 1906R 'White Black'",
     "displayImageURL": "/trainers/16/display.svg",
     "galleryImages": [
       "/trainers/16/display.svg",
@@ -294,14 +280,13 @@
       "/trainers/16/3.svg"
     ],
     "price": 410.0,
-    "description": "The Comme des Gar\u00e7ons Homme x 1906R 'White Black' collaboration redefines contemporary style with its minimalist design and avant-garde approach. Featuring a clean white upper with bold black accents, this sneaker exudes sophistication and fashion-forward elegance.",
+    "description": "The Comme des Garçons Homme x 1906R 'White Black' collaboration redefines contemporary style with its minimalist design and avant-garde approach. Featuring a clean white upper with bold black accents, this sneaker exudes sophistication and fashion-forward elegance.",
     "materials": ["Leather", "Textile", "Rubber"],
     "size": 11,
     "gender": "male",
     "id": 16,
     "featured": true,
-    "brand": "New Balance",
-    "sale": false
+    "brand": "New Balance"
   },
   {
     "name": "Zion Williamson x Air Jordan 1 Retro Low OG 'Voodoo'",
@@ -319,8 +304,7 @@
     "gender": "female",
     "id": 17,
     "featured": true,
-    "brand": "Nike",
-    "sale": false
+    "brand": "Nike"
   },
   {
     "name": "Adidas ZX 1000c",
@@ -338,8 +322,7 @@
     "gender": "female",
     "id": 18,
     "featured": false,
-    "brand": "Adidas",
-    "sale": true
+    "brand": "Adidas"
   },
   {
     "name": "DTLR x 9060 'Fire Sign'",
@@ -357,8 +340,7 @@
     "gender": "male",
     "id": 19,
     "featured": false,
-    "brand": "New Balance",
-    "sale": true
+    "brand": "New Balance"
   },
   {
     "name": "Bodega x 9060 'Age of Discovery'",
@@ -376,7 +358,6 @@
     "gender": "female",
     "id": 20,
     "featured": false,
-    "brand": "New Balance",
-    "sale": true
+    "brand": "New Balance"
   }
 ]
