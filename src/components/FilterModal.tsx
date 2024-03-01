@@ -95,7 +95,7 @@ const FilterModal = (props: props) => {
     >
       <form
         onClick={preventForm}
-        className="flex gap-y-6 flex-col w-1/4 bg-black p-6 fixed left-1/2 -translate-x-1/2 translate-y-[15%]"
+        className="flex gap-y-6 flex-col w-1/4 bg-black p-6 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         onSubmit={handleSubmit(onSubmit)}
       >
         <select {...register("brand")}>

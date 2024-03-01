@@ -19,15 +19,15 @@ type Props = {
 };
 
 const AddToBasketBtn = (props: Props) => {
-  const { addToBasket, basket } = useContext(BasketContext);
+  const { addToBasket, basket, setError } = useContext(BasketContext);
   const { trainer } = props;
 
   const handleClick = () => {
     if (basket.length < 8) {
       addToBasket(trainer);
     } else
-      alert(
-        "Basket full, please remove items or purchase current basket before adding more items."
+      setError(
+        "Basket full, please remove or purchase current items before adding more."
       );
   };
 

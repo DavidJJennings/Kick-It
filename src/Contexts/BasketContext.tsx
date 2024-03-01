@@ -10,6 +10,8 @@ type BasketContextType = {
   basket: Product[] | [];
   addToBasket: (product: (typeof stock)[1]) => void;
   removeFromBasket: (productId: number) => void;
+  error: string;
+  setError: React.Dispatch<React.SetStateAction<string>>;
 };
 
 interface MyProviderProps {
@@ -20,13 +22,22 @@ const BasketContext = createContext<BasketContextType>({
   basket: [],
   addToBasket: () => {},
   removeFromBasket: () => {},
+  error: "",
+  setError: () => {},
 });
 
 export const BasketContextProvider: React.FC<MyProviderProps> = ({
   children,
 }) => {
+  const [error, setError] = useState("");
   const [basket, setBasket] = useState<Basket>([]);
   const addToBasket = (product: Product) => {
+    if (basket.some((trainer) => trainer.id === product.id)) {
+      setError(
+        "In order to prevent the bulk buying and reselling of collectors items, users are limitted to purchasing 1 of each item at a time."
+      );
+      return;
+    }
     setBasket([...basket, product]);
   };
 
@@ -35,7 +46,9 @@ export const BasketContextProvider: React.FC<MyProviderProps> = ({
   };
 
   return (
-    <BasketContext.Provider value={{ basket, addToBasket, removeFromBasket }}>
+    <BasketContext.Provider
+      value={{ basket, addToBasket, removeFromBasket, error, setError }}
+    >
       {children}
     </BasketContext.Provider>
   );
