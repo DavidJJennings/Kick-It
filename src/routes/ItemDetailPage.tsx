@@ -2,10 +2,13 @@ import { useParams } from "react-router-dom";
 import Nav from "../components/Nav";
 import stock from "../Data/stock.json";
 import AddToBasketBtn from "../components/AddToBasketBtn";
-import { useState } from "react";
+import ErrorModal from "../components/ErrorModal";
+import { useContext, useState } from "react";
+import { BasketContext } from "../Contexts/BasketContext";
 const ItemDetailPage = () => {
   const { itemId } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
+  const { error } = useContext(BasketContext);
 
   if (itemId === undefined) {
     // Handle the undefined case, e.g., return an error message or a default state
@@ -32,9 +35,10 @@ const ItemDetailPage = () => {
       prevIndex === 0 ? trainer.galleryImages.length - 1 : prevIndex - 1
     );
   };
-
   return (
     <div className="flex justify-center">
+      {error && <ErrorModal />}
+
       <Nav />
       <section className="grid grid-cols-12 w-4/5 mt-28">
         <div className="col-span-8 row-span-2 aspect-w-33/20 pt-0">

@@ -6,7 +6,7 @@ import { useContext } from "react";
 const Nav = () => {
   const location = useLocation();
   const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent default link behavior
+    e.preventDefault();
     if (location.pathname === "/") {
       // Already on the homepage, just scroll to the top
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -20,7 +20,7 @@ const Nav = () => {
         onClick={(e) => {
           handleLogoClick(e);
         }}
-        className="flex col-span-1 gap-4"
+        className="flex col-span-1 gap-4 justify-left items-center"
       >
         <Link to={"/"}>
           <h2 className="font-Saira text-white hover:cursor-pointer text-3xl">
@@ -31,7 +31,7 @@ const Nav = () => {
         <input className="rounded-2xl" type="text" />
       </div>
 
-      <ul className="col-span-1 flex text-white justify-center gap-05 text-3xl text-center gap-x-10">
+      <ul className="col-span-1 row-span-1 flex text-white justify-center items-center gap-05 text-center gap-x-10 sm:text-xl md:text-2xl lg:text-3xl">
         <Link to="/#featured-section">
           <li className="hover:cursor-pointer">New & Featured</li>
         </Link>
@@ -50,7 +50,7 @@ const Nav = () => {
         </Link>
       </ul>
 
-      <div className="flex col-span-1 justify-end items-end hover:cursor-pointer gap-x-10">
+      <div className="flex col-span-1 justify-end items-center hover:cursor-pointer gap-x-10">
         <Link to="/checkout">
           <div className="relative">
             <img
@@ -67,7 +67,7 @@ const Nav = () => {
         </Link>
 
         <img
-          className="h-[30px]"
+          className="h-[33px]"
           src="/Header-Menu-Btn.svg"
           alt="menu button"
         />

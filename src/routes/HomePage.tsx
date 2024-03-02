@@ -2,10 +2,13 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import FeaturedGallery from "../components/FeaturedGallery";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { BasketContext } from "../Contexts/BasketContext";
+import ErrorModal from "../components/ErrorModal";
 
 const HomePage = () => {
+  const { error } = useContext(BasketContext);
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
@@ -18,6 +21,8 @@ const HomePage = () => {
   }, [location]);
   return (
     <>
+      {error && <ErrorModal />}
+
       <Nav></Nav>
       <Header></Header>
       <FeaturedGallery></FeaturedGallery>

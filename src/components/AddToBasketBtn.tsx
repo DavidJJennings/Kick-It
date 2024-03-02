@@ -23,7 +23,7 @@ const AddToBasketBtn = (props: Props) => {
   const { trainer } = props;
 
   const handleClick = () => {
-    if (basket.length < 8) {
+    if (basket.length < 5) {
       addToBasket(trainer);
     } else
       setError(
