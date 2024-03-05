@@ -55,8 +55,8 @@ const SortProducts = (props: props) => {
 
   return (
     <>
-      <div className="mt-36 flex justify-end p-8 items-center gap-x-10">
-        <div className="flex items-center gap-x-3">
+      <div className="mt-36 flex justify-end items-center gap-x-2 my-4 text-[0.5rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+        <div className="flex items-center justify-end gap-x-2">
           <span>Sort By </span>
           <select
             onChange={(e) => {
@@ -68,7 +68,7 @@ const SortProducts = (props: props) => {
               } else if (selectedsort === "low-high") {
                 setProducts(stockPriceAsc);
               } else {
-                setProducts(products);
+                setProducts(stock);
               }
             }}
             className=" border-2 border-black text-center cursor-pointer"
@@ -82,14 +82,14 @@ const SortProducts = (props: props) => {
         {isFiltered ? (
           <img
             onClick={(e) => handleClear(e)}
-            className="w-[150px] hover:opacity-65 cursor-pointer"
+            className="w-[12.5%] max-w-[165px] hover:opacity-65 cursor-pointer"
             src="Clear-Filter-Button.svg"
             alt="filter"
           />
         ) : (
           <img
             onClick={handleClick}
-            className="w-[150px] hover:opacity-65 cursor-pointer"
+            className="w-[12.5%] max-w-[165px] hover:opacity-65 cursor-pointer"
             src="Filter-Button.svg"
             alt="filter"
           />

@@ -32,9 +32,11 @@ const AddToBasketBtn = (props: Props) => {
   };
 
   return (
-    <button onClick={handleClick} className="hover:opacity-65 w-60 mx-auto">
-      <img src="/Add-ToBasket-Btn.svg" alt="" />
-    </button>
+    <div className="w-full flex justify-center">
+      <button onClick={handleClick} className="hover:opacity-65 w-3/5 mx-auto">
+        <img src="/Add-ToBasket-Btn.svg" alt="" />
+      </button>
+    </div>
   );
 };
 export default AddToBasketBtn;

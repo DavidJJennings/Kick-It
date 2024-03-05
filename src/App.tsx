@@ -21,7 +21,7 @@ export default function App() {
   }
 
   return (
-    <main className="relative font-saira font-medium text-2xl overflow-x-hidden">
+    <main className="relative font-saira font-medium text-xs overflow-x-hidden">
       <Router>
         <ScrollToTop></ScrollToTop>
         <Routes>

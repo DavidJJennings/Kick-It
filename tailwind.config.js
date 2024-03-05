@@ -11,6 +11,9 @@ export default {
       colors: {
         "petrol-light": "rgba(190, 200, 210, 0.4)",
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],

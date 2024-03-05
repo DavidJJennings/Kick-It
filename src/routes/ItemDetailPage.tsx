@@ -40,31 +40,44 @@ const ItemDetailPage = () => {
       {error && <ErrorModal />}
 
       <Nav />
-      <section className="grid grid-cols-12 w-4/5 mt-28">
-        <div className="col-span-8 row-span-2 aspect-w-33/20 pt-0">
-          <div className="relative p-8 ">
+      <section className="flex flex-col w-4/5 mt-28 text-[0.5rem] xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
+        <div className="aspect-w-33/20 pt-0">
+          <div className="relative flex justify-center">
             <img
-              className="object-cover w-full h-full p-16"
+              className="object-cover flex justify-center items-center w-full h-full p-16 md:w-4/5 md:h-4/5 lg:w-3/4 lg:h-3/4"
               src={trainer.galleryImages[imageIndex]}
               alt="Product Image"
             />
             <img
-              className="absolute w-24 top-1/2 -left-6 cursor-pointer"
+              className="absolute w-8 top-1/2 -left-6 cursor-pointer sm:w-14 md:w-16 lg:w-24 xl:w-28"
               src="/Left-Arrow.svg"
               alt="Left Arrow"
               onClick={(e) => prevImage(e)}
             />
             <img
-              className="absolute w-24 top-1/2 -right-2 cursor-pointer"
+              className="absolute w-8 top-1/2 -right-2 cursor-pointer sm:w-14 md:w-16 lg:w-24 xl:w-28"
               src="/Right-Arrow.svg"
               alt="Right Arrow"
               onClick={(e) => nextImage(e)}
             />
           </div>
         </div>
-        <div className="col-span-4 row-span-2 p-8 ml-4 flex flex-col gap-y-2 text-left justify-between">
-          <h2 className="font-bold text-4xl text-center">{trainer.name}</h2>
-          <p className=" font-light text-2xl">{trainer.description}</p>
+        <div className=" p-2 ml-4 flex flex-col gap-y-2 justify-between text-left">
+          <h2 className="font-bold text-left text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            {trainer.name}
+          </h2>
+          <div className="flex justify-start font-bold">
+            {trainer.price ? (
+              trainer.sale ? (
+                <h2 className=" text-red-600">£{formattedSalePrice}</h2>
+              ) : (
+                <h2>£{formattedPrice}</h2>
+              )
+            ) : (
+              <h2>N/A</h2>
+            )}
+          </div>
+          <p className=" font-light ">{trainer.description}</p>
           <h3 className="font-bold">Size : {trainer.size}</h3>
           <ul className="list-disc list-inside">
             <h3 className="font-bold ">Materials</h3>
@@ -76,18 +89,11 @@ const ItemDetailPage = () => {
               );
             })}
           </ul>{" "}
-          <div className="flex justify-center font-bold text-3xl">
-            {trainer.price ? (
-              trainer.sale ? (
-                <h2 className=" text-red-600">£{formattedSalePrice}</h2>
-              ) : (
-                <h2>£{formattedPrice}</h2>
-              )
-            ) : (
-              <h2>N/A</h2>
-            )}
+          <div className="w-full flex justify-center">
+            <div className="w-2/5">
+              <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
+            </div>
           </div>
-          <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
         </div>
       </section>
     </div>

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <section className="flex bg-black text-white p-8 justify-around items-start text-left mt-28">
+    <section className="flex bg-black text-white p-4 justify-around items-start text-left mt-14 text-[0.5rem] sm:text-xs md:text-sm md:p-8 lg:text-base xl:text-lg 2xl:text-xl">
       <div className="flex flex-col">
         <h3 className="font-bold pb-1">Shopping with Kick It</h3>
         <ul className="font-light">

@@ -32,20 +32,22 @@ const AllProductsGallery = (props: props) => {
             key={trainer.id}
             to={`/item/${trainer.id}`}
           >
-            <div className="flex flex-col justify-between text-center items-center gap-y-4 mx-auto mb-4 h-96 w-64">
-              <img
-                className="w-full"
-                src={trainer.displayImageURL || "/Stock-Trainers-Image.svg"}
-                alt=""
-              />
+            <div className="flex flex-col min-h-[130px] justify-between text-center items-center mb-4 h-full w-full text-[0.5rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
+              <div className="w-full h-2/5 flex justify-center items-center">
+                <img
+                  className="object-contain h-full w-full max-w-[85%]"
+                  src={trainer.displayImageURL || "/Stock-Trainers-Image.svg"}
+                  alt=""
+                />
+              </div>
 
-              <div className="w-[250px] min-h-16">
+              <div className="w-full leading-snug min-h-[30%] font-bold xs:min-h-[30%]">
                 <h4>{trainer.name || "N/A"}</h4>
               </div>
 
               {trainer.price ? (
                 trainer.sale ? (
-                  <div className="flex gap-x-2 justify-center items-center">
+                  <div className="flex gap-x-2">
                     <h4 className="font-bold line-through">
                       £{formattedOrigPrice}
                     </h4>
