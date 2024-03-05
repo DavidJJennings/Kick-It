@@ -1,16 +1,22 @@
-import stock from "../Data/stock.json";
+import { useContext } from "react";
 import AddToBasketBtn from "./AddToBasketBtn";
 import { Link } from "react-router-dom";
+import FilterItemsContext from "../Contexts/FilterItemsContext";
+import SortProducts from "./SortProducts";
 
 const SaleProductsGallery = () => {
-  const trainers = stock.filter((trainer) => trainer.sale === true);
+  const { products } = useContext(FilterItemsContext);
+  console.log(products);
   return (
     <section>
       <div className="mt-20 ml-4 mb-2 md:mt-32 xl:mt-40">
         <img className="w-1/5" src="Sale-Header.svg" alt="Sale" />
       </div>
+      <div>
+        <SortProducts />
+      </div>
       <div className="grid grid-cols-4 grid-rows-2 gap-y-20 gap-x-6 px-6 ">
-        {trainers.map((trainer) => {
+        {products.map((trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
           const origPrice = trainer.price * 1.1;
           const formattedOrigPrice = origPrice.toFixed(2);

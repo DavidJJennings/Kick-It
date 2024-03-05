@@ -1,32 +1,7 @@
 import { useForm } from "react-hook-form";
 import stock from "../Data/stock.json";
-import { useState } from "react";
-
-type props = {
-  filter: boolean;
-  setFilter: React.Dispatch<React.SetStateAction<boolean>>;
-  products: typeof stock;
-  setProducts: React.Dispatch<
-    React.SetStateAction<
-      {
-        name: string;
-        displayImageURL: string;
-        galleryImages: string[];
-        price: number;
-        description: string;
-        materials: string[];
-        size: number;
-        gender: string;
-        id: number;
-        featured: boolean;
-        brand: string;
-        sale: boolean;
-      }[]
-    >
-  >;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  setIsFiltered: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import { useContext, useState } from "react";
+import FilterItemsContext from "../Contexts/FilterItemsContext";
 
 type data = {
   brand: string;
@@ -36,9 +11,10 @@ type data = {
   priceMax: number;
 };
 
-const FilterModal = (props: props) => {
+const FilterModal = () => {
   const [priceRangeError, setPriceRangeError] = useState("");
-  const { filter, setFilter, setProducts, setLoading, setIsFiltered } = props;
+  const { filter, setFilter, setProducts, setLoading, setIsFiltered } =
+    useContext(FilterItemsContext);
   const preventForm = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
     e.stopPropagation();
   };

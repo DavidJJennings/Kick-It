@@ -15,6 +15,7 @@ export default function App() {
 
     useEffect(() => {
       window.scrollTo(0, 0);
+      console.log("hello world");
     }, [pathname]);
 
     return null;

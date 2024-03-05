@@ -7,6 +7,7 @@ import { BasketContext } from "../Contexts/BasketContext";
 
 const MenPage = () => {
   const { error } = useContext(BasketContext);
+
   return (
     <>
       {error && <ErrorModal />}
