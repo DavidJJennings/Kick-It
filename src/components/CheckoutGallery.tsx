@@ -44,19 +44,24 @@ const CheckoutGallery = () => {
                   <div className="flex flex-col justify-around items-center w-full">
                     <h2 className="font-bold">{trainer.name}</h2>
                     <h4>Size :{trainer.size}</h4>
+
                     <button
-                      className="hover:opacity-65 w-1/2"
+                      className="hover:opacity-65 w-1/3"
                       onClick={() => removeFromBasket(trainer.id)}
                     >
-                      <img src="/Remove-Button.svg" alt="Remove" />
+                      <img
+                        className="w-full"
+                        src="/Remove-Button.svg"
+                        alt="Remove"
+                      />
                     </button>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="col-span-6 box-border flex flex-col gap-y-8 w-full items-center ">
-            <div className="p-2 border-2 w-full border-black text-left flex flex-col gap-y-3 sm:w-3/4 md:p-6">
+          <div className="col-span-6 box-border flex flex-col gap-y-4 w-full items-center ">
+            <div className="mt-3 sm:mt-5 lg:mt-6 p-2 border-2 w-full border-black text-left flex flex-col gap-y-3 sm:w-3/4">
               <div
                 onClick={toggleDeliveryInfo}
                 className="flex justify-between items-center cursor-pointer"
@@ -93,7 +98,7 @@ const CheckoutGallery = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-black p-2 md:p-6 flex flex-col gap-y-4 w-full sm:w-3/4">
+            <div className="border-2 border-black p-2 md:p-6 flex flex-col gap-y-2 sm:gap-y-4 lg:gap-y-8 w-full sm:w-3/4">
               <div className=" border-b-2 border-black">
                 <h4 className="font-bold">
                   Total Price: £{formattedTotalPrice}

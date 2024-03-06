@@ -65,7 +65,7 @@ const Nav = () => {
               alt="Basket"
             />
             {basket.length > 0 && (
-              <div className="absolute -right-4 -top-3 text-white bg-[#21D585] rounded-full  h-8 w-8 box-border text-2xl flex items-center justify-center">
+              <div className="absolute -right-2 -top-1 sm:h-4 md:h-5 lg:h-6 lg:-top-2 lg:-right-3 xl:h-7 2xl:-top-3 2xl:-right-4 2xl:h-8 text-white bg-[#21D585] rounded-full aspect-square h-3 box-border flex items-center justify-center">
                 {basket.length}
               </div>
             )}
