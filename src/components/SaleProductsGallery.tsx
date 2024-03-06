@@ -15,7 +15,7 @@ const SaleProductsGallery = () => {
       <div>
         <SortProducts />
       </div>
-      <div className="grid grid-cols-4 grid-rows-2 gap-y-20 gap-x-6 px-6 ">
+      <div className="grid grid-cols-4 grid-rows-2 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 xl:gap-28 2xl:gap-y-32 gap-x-6 px-6 ">
         {products.map((trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
           const origPrice = trainer.price * 1.1;

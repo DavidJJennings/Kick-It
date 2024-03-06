@@ -1,6 +1,6 @@
 import FilterItemsContext from "../Contexts/FilterItemsContext";
 import stock from "../Data/stock.json";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const SortProducts = () => {
@@ -8,6 +8,8 @@ const SortProducts = () => {
   const menTrainers = stock.filter((trainer) => trainer.gender === "male");
   const womenTrainers = stock.filter((trainer) => trainer.gender === "female");
   const saleTrainers = stock.filter((trainer) => trainer.sale === true);
+
+  const selectRef = useRef<HTMLSelectElement>(null);
 
   function updateProductsBasedOnPath(pathname: string) {
     switch (pathname) {
@@ -29,7 +31,7 @@ const SortProducts = () => {
   }
 
   useEffect(() => {
-    updateProductsBasedOnPath(pathname); // Call a function to update products
+    updateProductsBasedOnPath(pathname); // Call a function to update products relevant to page location.
   }, [pathname]);
 
   const {
@@ -49,6 +51,13 @@ const SortProducts = () => {
     setFilter(!filter);
   };
 
+  useEffect(() => {
+    //resets sorting value if a filter is applied/removed.
+    if (selectRef.current) {
+      selectRef.current.value = "none";
+    }
+  }, [isFiltered]);
+
   const handleClear = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
     e.preventDefault();
     setLoading(true);
@@ -63,6 +72,7 @@ const SortProducts = () => {
         <div className="flex items-center justify-end gap-x-2">
           <span>Sort By </span>
           <select
+            ref={selectRef}
             onChange={(e) => {
               const selectedsort = e.target.value;
               if (selectedsort === "A-Z") {

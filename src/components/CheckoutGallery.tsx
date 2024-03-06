@@ -19,29 +19,33 @@ const CheckoutGallery = () => {
   };
 
   return (
-    <section className="grid grid-cols-12 w-3/4 mt-28 overflow-hidden">
+    <section className="grid grid-cols-12 w-full mt-14 sm:mt-20 md:mt-24 xl:mt-32 2xl:mt-36 overflow-hidden p-2 md:p-4 text-[0.5rem] sm:text-sm xs:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
       {basket.length > 0 ? (
         <>
-          <div className="flex col-span-8 flex-col">
+          <div className="flex col-span-6  sm:px-8 flex-col justify-start ">
             <div>
               <img
-                className="w-72 "
+                className="w-1/2 "
                 src="/Your-Items-Header.svg"
                 alt="Your Items"
               />
             </div>
             {basket.map((trainer) => {
               return (
-                <div className="flex p-6">
-                  <div className="w-64">
-                    <img src={trainer.displayImageURL} alt="" />
+                <div className="flex flex-col p-2 gap-y-2">
+                  <div className="w-full flex justify-center items-center">
+                    <img
+                      className=" w-3/4"
+                      src={trainer.displayImageURL}
+                      alt="Trainer"
+                    />
                   </div>
 
                   <div className="flex flex-col justify-around items-center w-full">
                     <h2 className="font-bold">{trainer.name}</h2>
                     <h4>Size :{trainer.size}</h4>
                     <button
-                      className="hover:opacity-65 w-40"
+                      className="hover:opacity-65 w-1/2"
                       onClick={() => removeFromBasket(trainer.id)}
                     >
                       <img src="/Remove-Button.svg" alt="Remove" />
@@ -51,8 +55,8 @@ const CheckoutGallery = () => {
               );
             })}
           </div>
-          <div className="col-span-4 box-border flex flex-col p-4 gap-y-8">
-            <div className="p-2 border-2 border-black text-left flex flex-col gap-y-3">
+          <div className="col-span-6 box-border flex flex-col gap-y-8 w-full items-center ">
+            <div className="p-2 border-2 w-full border-black text-left flex flex-col gap-y-3 sm:w-3/4 p-2 md:p-6">
               <div
                 onClick={toggleDeliveryInfo}
                 className="flex justify-between items-center cursor-pointer"
@@ -89,7 +93,7 @@ const CheckoutGallery = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-black p-6 flex flex-col gap-y-4 ">
+            <div className="border-2 border-black p-2 md:p-6 flex flex-col gap-y-4 w-full sm:w-3/4">
               <div className=" border-b-2 border-black">
                 <h4 className="font-bold">
                   Total Price: £{formattedTotalPrice}
@@ -104,7 +108,7 @@ const CheckoutGallery = () => {
                 </div>
               </div>
 
-              <div className="flex justify-center items-center relative left-2">
+              <div className="flex justify-center items-center hover:opacity-65">
                 <button>
                   <img src="Checkout-Button.svg" alt="Checkout" />
                 </button>

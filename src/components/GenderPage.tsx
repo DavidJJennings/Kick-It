@@ -19,7 +19,7 @@ const GenderPage = () => {
       <div>
         <SortProducts />
       </div>
-      <div className="grid grid-cols-4 gap-y-6 gap-x-6 px-6 lg:gap-y-8">
+      <div className="grid grid-cols-4  gap-x-6 px-6 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 xl:gap-28 2xl:gap-y-32">
         {products.map((trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
           const origPrice = trainer.price * 1.1;
