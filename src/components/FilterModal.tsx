@@ -19,6 +19,7 @@ const FilterModal = () => {
     setLoading,
     setIsFiltered,
     products,
+    setFilteredProducts,
   } = useContext(FilterItemsContext);
   const preventForm = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
     e.stopPropagation();
@@ -64,6 +65,7 @@ const FilterModal = () => {
       });
 
       setProducts(filteredTrainers);
+      setFilteredProducts(filteredTrainers);
       setIsFiltered(true);
       setLoading(false);
     }

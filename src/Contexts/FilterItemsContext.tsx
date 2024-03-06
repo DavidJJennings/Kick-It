@@ -4,12 +4,14 @@ import stock from "../Data/stock.json";
 type FilterContextType = {
   filter: boolean;
   products: typeof stock;
+  filteredProducts: typeof stock;
   loading: boolean;
   isFiltered: boolean;
   setFilter: React.Dispatch<React.SetStateAction<boolean>>;
   setProducts: React.Dispatch<React.SetStateAction<typeof stock>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setIsFiltered: React.Dispatch<React.SetStateAction<boolean>>;
+  setFilteredProducts: React.Dispatch<React.SetStateAction<typeof stock>>;
 };
 
 interface MyProviderProps {
@@ -19,12 +21,14 @@ interface MyProviderProps {
 const FilterItemsContext = createContext<FilterContextType>({
   filter: false,
   products: stock,
+  filteredProducts: stock,
   loading: false,
   isFiltered: false,
   setFilter: () => {},
   setProducts: () => {},
   setLoading: () => {},
   setIsFiltered: () => {},
+  setFilteredProducts: () => {},
 });
 
 export const FilterItemsContextProvider: React.FC<MyProviderProps> = ({
@@ -34,6 +38,7 @@ export const FilterItemsContextProvider: React.FC<MyProviderProps> = ({
   const [products, setProducts] = useState(stock);
   const [loading, setLoading] = useState(false);
   const [isFiltered, setIsFiltered] = useState(false);
+  const [filteredProducts, setFilteredProducts] = useState(stock);
   const values = {
     filter,
     setFilter,
@@ -43,6 +48,8 @@ export const FilterItemsContextProvider: React.FC<MyProviderProps> = ({
     setLoading,
     isFiltered,
     setIsFiltered,
+    filteredProducts,
+    setFilteredProducts,
   };
   return (
     <FilterItemsContext.Provider value={values}>
