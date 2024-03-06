@@ -62,7 +62,22 @@ const SortProducts = () => {
     e.preventDefault();
     setLoading(true);
     setIsFiltered(false);
-    setProducts(stock);
+    switch (pathname) {
+      case "/seeall":
+        setProducts(stock);
+        break;
+      case "/sale":
+        setProducts(saleTrainers);
+        break;
+      case "/men":
+        setProducts(menTrainers);
+        break;
+      case "/women":
+        setProducts(womenTrainers);
+        break;
+      default:
+        setProducts(stock);
+    }
     setLoading(false);
   };
 
@@ -74,12 +89,12 @@ const SortProducts = () => {
           <select
             ref={selectRef}
             onChange={(e) => {
-              const selectedsort = e.target.value;
-              if (selectedsort === "A-Z") {
+              const selectedSort = e.target.value;
+              if (selectedSort === "A-Z") {
                 setProducts(stockAZ);
-              } else if (selectedsort === "high-low") {
+              } else if (selectedSort === "high-low") {
                 setProducts(stockPriceDesc);
-              } else if (selectedsort === "low-high") {
+              } else if (selectedSort === "low-high") {
                 setProducts(stockPriceAsc);
               } else {
                 switch (pathname) {

@@ -8,6 +8,8 @@ import SalePage from "./routes/SalePage";
 import MenPage from "./routes/MenPage";
 import WomenPage from "./routes/WomenPage";
 import Checkout from "./routes/Checkout";
+import Contact from "./routes/Contact";
+import About from "./routes/About";
 
 export default function App() {
   function ScrollToTop() {
@@ -33,6 +35,8 @@ export default function App() {
           <Route path="/men" element={<MenPage />} />
           <Route path="/women" element={<WomenPage />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </main>

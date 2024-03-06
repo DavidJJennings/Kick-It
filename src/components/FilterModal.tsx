@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import stock from "../Data/stock.json";
 import { useContext, useState } from "react";
 import FilterItemsContext from "../Contexts/FilterItemsContext";
 
@@ -13,8 +12,14 @@ type data = {
 
 const FilterModal = () => {
   const [priceRangeError, setPriceRangeError] = useState("");
-  const { filter, setFilter, setProducts, setLoading, setIsFiltered } =
-    useContext(FilterItemsContext);
+  const {
+    filter,
+    setFilter,
+    setProducts,
+    setLoading,
+    setIsFiltered,
+    products,
+  } = useContext(FilterItemsContext);
   const preventForm = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
     e.stopPropagation();
   };
@@ -43,7 +48,7 @@ const FilterModal = () => {
       setFilter(!filter);
       setLoading(true);
 
-      const filteredTrainers = stock.filter((trainer) => {
+      const filteredTrainers = products.filter((trainer) => {
         const byBrand = numericData.brand
           ? trainer.brand === numericData.brand
           : true;

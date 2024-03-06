@@ -22,9 +22,12 @@ const Menu = ({ isOpen }: props) => {
               Sale
             </li>
           </Link>
-
-          <li className="hover:cursor-pointer hover:underline">About</li>
-          <li className="hover:cursor-pointer hover:underline">Contact</li>
+          <Link to="/about">
+            <li className="hover:cursor-pointer hover:underline">About</li>
+          </Link>
+          <Link to="/contact">
+            <li className="hover:cursor-pointer hover:underline">Contact</li>
+          </Link>
         </ul>
       </div>
     </section>

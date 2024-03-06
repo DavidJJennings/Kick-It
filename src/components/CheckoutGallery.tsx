@@ -56,7 +56,7 @@ const CheckoutGallery = () => {
             })}
           </div>
           <div className="col-span-6 box-border flex flex-col gap-y-8 w-full items-center ">
-            <div className="p-2 border-2 w-full border-black text-left flex flex-col gap-y-3 sm:w-3/4 p-2 md:p-6">
+            <div className="p-2 border-2 w-full border-black text-left flex flex-col gap-y-3 sm:w-3/4 md:p-6">
               <div
                 onClick={toggleDeliveryInfo}
                 className="flex justify-between items-center cursor-pointer"
