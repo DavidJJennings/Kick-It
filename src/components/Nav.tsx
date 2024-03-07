@@ -18,7 +18,7 @@ const Nav = () => {
   const { basket } = useContext(BasketContext);
 
   return (
-    <nav className="grid p-2 grid-cols-8 grid-rows-1 text-xs sm:p-4 sm:text-lg md:text-xl lg:text-2xl xl:p-7 xl:text-3xl 2xl:text-4xl bg-black w-full font-bold fixed top-0 left-0 z-10">
+    <nav className="grid p-2 grid-cols-8 grid-rows-1 text-[0.9rem] min-h-14  sm:p-4 sm:text-lg md:text-xl lg:text-2xl xl:p-7 xl:text-3xl 2xl:text-4xl bg-black w-full font-bold fixed top-0 left-0 z-10">
       <Menu isOpen={isOpen} />
       <div
         onClick={(e) => {
@@ -27,7 +27,7 @@ const Nav = () => {
         className="flex col-span-2 justify-start gap-x-2 md:gap-x-4 items-center text-center"
       >
         <Link className="z-50" to={"/"}>
-          <h2 className="leading-4 font-Saira text-white hover:cursor-pointer whitespace-nowrap text-xl lg:text-2xl xl:text-3xl  2xl:text-4xl">
+          <h2 className="leading-4 font-Saira text-white hover:cursor-pointer whitespace-nowrap text-2xl md:text-3xl lg:text-4xl  xl:text-5xl">
             KICK IT
           </h2>
         </Link>
@@ -38,7 +38,7 @@ const Nav = () => {
         />
       </div>
 
-      <ul className="col-span-4 row-span-1 p-1 flex text-white justify-around xs:justify-center xs:gap-x-4 md:gap-x-6 md:py-4 xl:gap-x-8 2xl:gap-x-12 items-center text-center">
+      <ul className="col-span-4 row-span-1 p-1 flex text-white justify-between xs:justify-center xs:gap-x-4 md:gap-x-6 md:py-4 xl:gap-x-8 2xl:gap-x-12 items-center text-center">
         <Link to="/#featured-section">
           <li className="hover:cursor-pointer max-w-[40px] xs:max-w-none xl:whitespace-nowrap">
             New & Featured
