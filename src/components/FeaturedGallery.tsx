@@ -24,13 +24,13 @@ const FeaturedGallery = () => {
     <section id="featured-section">
       <div className="flex items-end">
         <img
-          className=" ml-2 mt-8 w-1/4 "
+          className=" ml-2 mt-8 w-1/3 md:mb-6"
           src="/Featured-Header.svg"
           alt="Featured"
         />
       </div>
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 xl:gap-28 2xl:gap-y-32 gap-x-2 pt-5 mt-2 px-3">
+      <div className="grid grid-cols-3 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 lg:grid-cols-4 xl:gap-y-28 2xl:gap-y-32 gap-x-2 pt-5 mt-2 px-3">
         {featuredTrainers.map((trainer: Trainer) => {
           const formattedPrice = trainer.price.toFixed(2);
           const buttonProps = { trainer };
@@ -48,7 +48,7 @@ const FeaturedGallery = () => {
               key={trainer.id}
               to={`/item/${trainer.id}`}
             >
-              <div className="flex flex-col justify-between text-center items-center mb-4 h-full w-full text-[0.5rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+              <div className="flex flex-col justify-between text-center items-center mb-4 h-full w-full text-[0.7rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
                 <div className="w-full h-2/5 flex justify-center items-center">
                   <img
                     className="object-contain h-full w-full max-w-[85%]"
@@ -69,8 +69,8 @@ const FeaturedGallery = () => {
           );
         })}
       </div>
-      <div className="flex items-start justify-center w-screen mt-8">
-        <Link className="w-[12.5%]" to={"seeall"}>
+      <div className="flex items-start justify-center w-screen mt-3 sm:mt-5">
+        <Link className="w-1/5 sm:w-1/6" to={"seeall"}>
           <button className="group w-full">
             <img
               className="w-full group-hover:opacity-65"

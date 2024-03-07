@@ -40,29 +40,30 @@ const ItemDetailPage = () => {
       {error && <ErrorModal />}
 
       <Nav />
-      <section className="flex flex-col w-4/5 mt-28 text-[0.5rem] xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-        <div className="aspect-w-33/20 pt-0">
-          <div className="relative flex justify-center">
+      <section className="flex flex-col mb-12 lg:mb-6 justify-center items-center lg:flex-row lg:items-start w-4/5 mt-20 sm:mt-24 md:mt-32 text-[0.9rem] lg:w-full  lg:px-12 xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl xl:mt-40">
+        <div className="aspect-w-33/20  lg:w-3/5 ">
+          <div className="relative flex  justify-center items-center p-8  lg:p-14 pt-0 lg:pt-4">
             <img
-              className="object-cover flex justify-center items-center w-full h-full p-16 md:w-4/5 md:h-4/5 lg:w-3/4 lg:h-3/4"
+              className="object-cover flex justify-center items-center w-full h-full sm:w-4/5 lg:w-full"
               src={trainer.galleryImages[imageIndex]}
               alt="Product Image"
             />
             <img
-              className="absolute w-8 top-1/2 -left-6 cursor-pointer sm:w-14 md:w-16 lg:w-24 xl:w-28"
+              className="absolute w-14 top-1/2 -translate-y-1/2 -left-6 cursor-pointer sm:w-20  lg:-left-8"
               src="/Left-Arrow.svg"
               alt="Left Arrow"
               onClick={(e) => prevImage(e)}
             />
             <img
-              className="absolute w-8 top-1/2 -right-2 cursor-pointer sm:w-14 md:w-16 lg:w-24 xl:w-28"
+              className="absolute w-14 top-1/2 -translate-y-1/2 -right-6 cursor-pointer sm:w-20 lg:-right-4"
               src="/Right-Arrow.svg"
               alt="Right Arrow"
               onClick={(e) => nextImage(e)}
             />
           </div>
         </div>
-        <div className=" p-2 ml-4 flex flex-col gap-y-2 justify-between text-left">
+
+        <div className="flex flex-col gap-y-4 justify-between text-left lg:w-2/5 lg:p-4 lg:pl-16">
           <h2 className="font-bold text-left text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             {trainer.name}
           </h2>
@@ -83,14 +84,14 @@ const ItemDetailPage = () => {
             <h3 className="font-bold ">Materials</h3>
             {trainer.materials.map((material, index) => {
               return (
-                <li key={`${trainer.id}.${index}`} className="font-light ">
+                <li key={`${trainer.id}.${index}`} className="font-light p-2 ">
                   {material}
                 </li>
               );
             })}
           </ul>{" "}
-          <div className="w-full flex justify-center">
-            <div className="w-2/5">
+          <div className=" flex justify-center sm:mt-4 lg:mt-2">
+            <div className="sm:w-4/5 md:w-3/5 lg:w-5/6">
               <AddToBasketBtn {...buttonProps}></AddToBasketBtn>
             </div>
           </div>

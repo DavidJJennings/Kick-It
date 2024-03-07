@@ -9,13 +9,17 @@ const AllProductsGallery = () => {
 
   return (
     <section>
-      <div className="mt-20 px-4 mb-2 md:mt-32 xl:mt-40 flex justify-between w-full">
-        <img className="w-1/5" src="/All-Stock-Header.svg " alt="Sale" />
+      <div className="mt-20  mb-2 md:mt-32 xl:mt-40 flex justify-between w-full">
+        <img
+          className="w-1/3 ml-2 mt-8 md:mb-6"
+          src="/All-Stock-Header.svg "
+          alt="Sale"
+        />
       </div>
       <div>
         <SortProducts />
       </div>
-      <div className="grid grid-cols-4 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 xl:gap-28 2xl:gap-y-32gap-x-6 px-6">
+      <div className="grid grid-cols-3 gap-y-3 xs:gap-y-8 sm:gap-y-14 md:gap-y-20 lg:gap-y-24 lg:grid-cols-4 xl:gap-y-28 2xl:gap-y-32 gap-x-2 pt-5 mt-2 px-3">
         {products.map((trainer) => {
           const buttonProps = { trainer };
           const formattedPrice = trainer.price.toFixed(2);
@@ -36,7 +40,7 @@ const AllProductsGallery = () => {
               key={trainer.id}
               to={`/item/${trainer.id}`}
             >
-              <div className="flex flex-col min-h-[130px] justify-between text-center items-center mb-4 h-full w-full text-[0.5rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
+              <div className="flex flex-col justify-between text-center items-center mb-4 h-full w-full text-[0.7rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
                 <div className="w-full h-2/5 flex justify-center items-center">
                   <img
                     className="object-contain h-full w-full max-w-[85%]"

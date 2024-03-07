@@ -33,13 +33,28 @@ const CheckoutGallery = () => {
             {basket.map((trainer) => {
               return (
                 <div className="flex flex-col p-2 gap-y-2">
-                  <div className="w-full flex justify-center items-center">
-                    <img
-                      className=" w-3/4"
-                      src={trainer.displayImageURL}
-                      alt="Trainer"
-                    />
-                  </div>
+                  <Link
+                    onClick={(e) => {
+                      if (
+                        (e.target as HTMLElement).tagName.toLowerCase() ===
+                          "img" &&
+                        (e.target as HTMLElement).getAttribute("src") ===
+                          "/Add-ToBasket-Btn.svg"
+                      ) {
+                        e.preventDefault();
+                      }
+                    }}
+                    key={trainer.id}
+                    to={`/item/${trainer.id}`}
+                  >
+                    <div className="w-full flex justify-center items-center">
+                      <img
+                        className=" w-3/4"
+                        src={trainer.displayImageURL}
+                        alt="Trainer"
+                      />
+                    </div>
+                  </Link>
 
                   <div className="flex flex-col justify-around items-center w-full">
                     <h2 className="font-bold">{trainer.name}</h2>
