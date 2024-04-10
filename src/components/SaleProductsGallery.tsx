@@ -10,7 +10,7 @@ const SaleProductsGallery = () => {
   return (
     <section>
       <div className="mt-20 ml-2 mb-2 md:mt-32 xl:mt-40">
-        <img className="w-1/3" src="Sale-Header.svg" alt="Sale" />
+        <img className="w-1/4 md:w-1/5" src="Sale-Header.svg" alt="Sale" />
       </div>
       <div>
         <SortProducts />

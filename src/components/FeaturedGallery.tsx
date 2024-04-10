@@ -24,7 +24,7 @@ const FeaturedGallery = () => {
     <section id="featured-section">
       <div className="flex items-end">
         <img
-          className=" ml-2 mt-8 w-1/3 md:mb-6"
+          className="ml-2 mt-8 w-1/4 md:w-1/5 md:mb-6"
           src="/Featured-Header.svg"
           alt="Featured"
         />

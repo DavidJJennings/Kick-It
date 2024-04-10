@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BasketContext } from "../Contexts/BasketContext";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
@@ -7,26 +7,27 @@ import Menu from "./Menu";
 const Nav = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const handleMenu = () => setIsOpen(!isOpen);
-  const handleLogoClick = (e: React.MouseEvent) => {
+  const handleMenu = () => setIsOpen((prev) => !prev);
+  const navigate = useNavigate();
+
+  const handleNavClick = (e: React.MouseEvent, targetPath: string) => {
     e.preventDefault();
-    if (location.pathname === "/") {
-      // Already on the homepage, just scroll to the top
+    if (location.pathname === targetPath) {
+      // Already on the target page, just scroll to the top
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else null;
+    } else {
+      // Navigate to the target path as the user is not on that page
+      navigate(targetPath);
+    }
   };
+
   const { basket } = useContext(BasketContext);
 
   return (
     <nav className="grid p-2 grid-cols-8 grid-rows-1 text-[0.9rem] min-h-14  sm:p-4 sm:text-lg md:text-xl lg:text-2xl xl:p-7 xl:text-3xl 2xl:text-4xl bg-black w-full font-bold fixed top-0 left-0 z-10">
-      <Menu isOpen={isOpen} />
-      <div
-        onClick={(e) => {
-          handleLogoClick(e);
-        }}
-        className="flex col-span-2 justify-start gap-x-2 md:gap-x-4 items-center text-center"
-      >
-        <Link className="z-50" to={"/"}>
+      <Menu isOpen={isOpen} handleMenu={handleMenu} />
+      <div className="flex col-span-2 justify-start gap-x-2 md:gap-x-4 items-center text-center">
+        <Link to="/" onClick={(e) => handleNavClick(e, "/")}>
           <h2 className="leading-4 font-Saira text-white hover:cursor-pointer whitespace-nowrap text-2xl md:text-3xl lg:text-4xl  xl:text-5xl">
             KICK IT
           </h2>
@@ -45,13 +46,13 @@ const Nav = () => {
           </li>
         </Link>
 
-        <Link to={"/men"}>
+        <Link to="/" onClick={(e) => handleNavClick(e, "/men")}>
           <li className="hover:cursor-pointer ">Men</li>
         </Link>
-        <Link to={"/women"}>
+        <Link to="/" onClick={(e) => handleNavClick(e, "/women")}>
           <li className="hover:cursor-pointer ">Women</li>
         </Link>
-        <Link to="/sale">
+        <Link to="/" onClick={(e) => handleNavClick(e, "/sale")}>
           <li className="text-[#FF0800] hover:cursor-pointer">Sale</li>
         </Link>
       </ul>
@@ -74,7 +75,7 @@ const Nav = () => {
 
         <button
           onClick={handleMenu}
-          className="flex flex-col justify-center items-center h-4 sm:h-5 md:h-6 lg:h-7 xl:h-9 aspect-square z-50"
+          className="flex flex-col justify-center h-4 sm:h-5 md:h-6 lg:h-7 xl:h-9 aspect-square z-50"
         >
           <span
             className={`bg-white block transition-all duration-300 ease-out

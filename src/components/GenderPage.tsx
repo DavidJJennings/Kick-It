@@ -7,14 +7,13 @@ import FilterItemsContext from "../Contexts/FilterItemsContext";
 
 const GenderPage = () => {
   const { products } = useContext(FilterItemsContext);
-  console.log(products);
   const location = useLocation();
   const isMen = location.pathname.includes("/men");
   const headerImage = isMen ? "Men-Header.svg" : "Women-Header.svg";
   return (
     <section>
       <div className="mt-20 ml-2 md:mt-32 xl:mt-40 flex justify-between w-full">
-        <img className="w-1/3" src={headerImage} alt="Sale" />
+        <img className="w-1/4 md:w-1/5" src={headerImage} alt="Sale" />
       </div>
       <div>
         <SortProducts />

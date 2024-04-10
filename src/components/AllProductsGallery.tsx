@@ -9,9 +9,9 @@ const AllProductsGallery = () => {
 
   return (
     <section>
-      <div className="mt-20  mb-2 md:mt-32 xl:mt-40 flex justify-between w-full">
+      <div className=" mt-10 mb-2 md:mt-32 xl:mt-40 flex justify-between w-full">
         <img
-          className="w-1/3 ml-2 mt-8 md:mb-6"
+          className="w-1/4 md:w-1/5 ml-2 mt-8 md:mb-6"
           src="/All-Stock-Header.svg "
           alt="Sale"
         />
