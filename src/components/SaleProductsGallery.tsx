@@ -6,7 +6,6 @@ import SortProducts from "./SortProducts";
 
 const SaleProductsGallery = () => {
   const { products } = useContext(FilterItemsContext);
-  console.log(products);
   return (
     <section>
       <div className="mt-20 ml-2 mb-2 md:mt-32 xl:mt-40">

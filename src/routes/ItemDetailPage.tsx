@@ -42,7 +42,7 @@ const ItemDetailPage = () => {
       <Nav />
       <section className="flex flex-col mb-12 lg:mb-6 justify-center items-center lg:flex-row lg:items-start w-4/5 mt-20 sm:mt-24 md:mt-32 text-[0.9rem] lg:w-full  lg:px-12 xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl xl:mt-40">
         <div className="aspect-w-33/20  lg:w-3/5 ">
-          <div className="relative flex  justify-center items-center p-8  lg:p-14 pt-0 lg:pt-4">
+          <div className="relative flex justify-center items-center p-8  lg:p-14 pt-0 lg:pt-4">
             <img
               className="object-cover flex justify-center items-center w-full h-full sm:w-4/5 lg:w-full"
               src={trainer.galleryImages[imageIndex]}
