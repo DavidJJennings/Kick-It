@@ -24,7 +24,7 @@ const Nav = () => {
   const { basket } = useContext(BasketContext);
 
   return (
-    <nav className="grid p-2 grid-cols-8 grid-rows-1 text-[0.9rem] min-h-14  sm:p-4 sm:text-lg md:text-xl lg:text-2xl xl:p-7 xl:text-3xl 2xl:text-4xl bg-black w-full font-bold fixed top-0 left-0 z-10">
+    <nav className="grid p-2 grid-cols-8 grid-rows-1 text-[0.65rem] sm:p-4 lg:px-8 xl:px-10 2xl:px-12 xs:text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl bg-black w-full font-bold fixed top-0 left-0 z-10">
       <Menu isOpen={isOpen} handleMenu={handleMenu} />
       <div className="flex col-span-2 justify-start gap-x-2 md:gap-x-4 items-center text-center">
         <Link to="/" onClick={(e) => handleNavClick(e, "/")}>
@@ -35,21 +35,24 @@ const Nav = () => {
       </div>
 
       <ul className="col-span-4 row-span-1 p-1 flex text-white justify-between xs:justify-center xs:gap-x-4 md:gap-x-6 md:py-4 xl:gap-x-8 2xl:gap-x-12 items-center text-center">
-        <Link to="/#featured-section">
-          <li className="hover:cursor-pointer max-w-[40px] xs:max-w-none xl:whitespace-nowrap">
-            New & Featured
-          </li>
-        </Link>
-
-        <Link to="/" onClick={(e) => handleNavClick(e, "/men")}>
-          <li className="hover:cursor-pointer ">Men</li>
-        </Link>
-        <Link to="/" onClick={(e) => handleNavClick(e, "/women")}>
-          <li className="hover:cursor-pointer ">Women</li>
-        </Link>
-        <Link to="/" onClick={(e) => handleNavClick(e, "/sale")}>
-          <li className="text-[#FF0800] hover:cursor-pointer">Sale</li>
-        </Link>
+        <li className="hover:cursor-pointer max-w-[40px] xs:max-w-none xl:whitespace-nowrap">
+          <Link to="/#featured-section">New & Featured</Link>
+        </li>
+        <li className="hover:cursor-pointer ">
+          <Link to="/" onClick={(e) => handleNavClick(e, "/men")}>
+            Men
+          </Link>
+        </li>
+        <li className="hover:cursor-pointer ">
+          <Link to="/" onClick={(e) => handleNavClick(e, "/women")}>
+            Women
+          </Link>
+        </li>
+        <li className="text-[#FF0800] hover:cursor-pointer">
+          <Link to="/" onClick={(e) => handleNavClick(e, "/sale")}>
+            Sale
+          </Link>
+        </li>
       </ul>
 
       <div className="flex col-span-2 justify-end gap-x-4 sm:gap-x-6 lg:gap-x-8 items-center hover:cursor-pointer ">

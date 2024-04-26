@@ -24,22 +24,26 @@ const Menu = ({ isOpen, handleMenu }: props) => {
     >
       <div className="flex h-3/4 w-full justify-center items-center px-2 py-3">
         <ul className="flex flex-col text-white text-center gap-6 text-2xl md:text-3xl lg:text-4xl">
-          <Link to="/" onClick={(e) => handleNavClick(e, "/seeall")}>
-            <li className="hover:cursor-pointer hover:underline">
+          <li className="hover:cursor-pointer hover:underline">
+            <Link to="/" onClick={(e) => handleNavClick(e, "/seeall")}>
               All Trainers
-            </li>
-          </Link>
-          <Link to="/" onClick={(e) => handleNavClick(e, "/sale")}>
-            <li className="text-[#FF0800] hover:cursor-pointer hover:underline">
+            </Link>
+          </li>
+          <li className="text-[#FF0800] hover:cursor-pointer hover:underline">
+            <Link to="/" onClick={(e) => handleNavClick(e, "/sale")}>
               Sale
-            </li>
-          </Link>
-          <Link to="/" onClick={(e) => handleNavClick(e, "/about")}>
-            <li className="hover:cursor-pointer hover:underline">About</li>
-          </Link>
-          <Link to="/" onClick={(e) => handleNavClick(e, "/contact")}>
-            <li className="hover:cursor-pointer hover:underline">Contact</li>
-          </Link>
+            </Link>
+          </li>
+          <li className="hover:cursor-pointer hover:underline">
+            <Link to="/" onClick={(e) => handleNavClick(e, "/about")}>
+              About
+            </Link>
+          </li>
+          <li className="hover:cursor-pointer hover:underline">
+            <Link to="/" onClick={(e) => handleNavClick(e, "/contact")}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </section>
