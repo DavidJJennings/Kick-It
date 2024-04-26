@@ -71,7 +71,7 @@ const Nav = () => {
           </div>
         </Link>
 
-        <button
+        <button /* Hamburger menu, brings top and bottom lines together rotates in opposing directions and makes middle line invisible when menu is open.*/
           onClick={handleMenu}
           aria-label="Menu"
           className="flex flex-col justify-center h-4 sm:h-5 md:h-6 lg:h-7 xl:h-9 aspect-square z-50"

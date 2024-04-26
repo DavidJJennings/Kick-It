@@ -2,6 +2,7 @@ import { ReactNode, createContext, useState } from "react";
 import stock from "../Data/stock.json";
 
 type FilterContextType = {
+  //Assigned types to values to be given as context.
   filter: boolean;
   products: typeof stock;
   filteredProducts: typeof stock;
@@ -15,10 +16,12 @@ type FilterContextType = {
 };
 
 interface MyProviderProps {
+  // Typed children that will be given context
   children: ReactNode;
 }
 
 const FilterItemsContext = createContext<FilterContextType>({
+  // Created instance of context with initial values
   filter: false,
   products: stock,
   filteredProducts: stock,

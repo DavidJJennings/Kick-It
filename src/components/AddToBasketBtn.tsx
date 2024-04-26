@@ -23,10 +23,12 @@ const AddToBasketBtn = (props: Props) => {
   const { trainer } = props;
 
   const handleClick = () => {
+    //Add item to the basket.
     if (basket.length < 5) {
       addToBasket(trainer);
     } else
       setError(
+        //Give error a value, thus making it true causing the error modal to pop and show message
         "Basket full, please remove or purchase current items before adding more."
       );
   };

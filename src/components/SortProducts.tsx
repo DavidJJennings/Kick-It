@@ -16,20 +16,22 @@ const SortProducts = () => {
     filteredProducts,
     setFilteredProducts,
   } = useContext(FilterItemsContext);
-  const selectRef = useRef<HTMLSelectElement>(null);
+  const selectRef = useRef<HTMLSelectElement>(null); // initiated ref, for assigning to the "sort by" selector.
 
   const updateProductsBasedOnPath = useCallback(
     (path: string) => {
+      //Filter all of the possible stock lists that user can filter by.
       const menTrainers = stock.filter((trainer) => trainer.gender === "male");
       const womenTrainers = stock.filter(
         (trainer) => trainer.gender === "female"
       );
       const saleTrainers = stock.filter((trainer) => trainer.sale === true);
-
+      //Set the products to the necessary stock list based on the path/page.
       switch (path) {
         case "/seeall":
           setProducts(stock);
           setFilteredProducts(stock);
+          //Reset the filtered products since they were remaining when the user went to another page and came back.
           setIsFiltered(false);
           break;
         case "/sale":
@@ -51,26 +53,29 @@ const SortProducts = () => {
 
           break;
         default:
+          //Handle the case where no filter is selected
           setProducts(stock);
       }
     },
-    [setProducts, setFilteredProducts, setIsFiltered]
+    [setProducts, setFilteredProducts, setIsFiltered] // Recreate function if the following were to change value
   );
 
   useEffect(() => {
-    updateProductsBasedOnPath(pathname); // Call a function to update products relevant to page location.
+    updateProductsBasedOnPath(pathname); // By adding use effect we can then execute the callback if pathname changes.
   }, [pathname, updateProductsBasedOnPath]);
 
+  //Sorts current stock by alphabet and price
   const stockAZ = [...products].sort((a, b) => a.name.localeCompare(b.name));
   const stockPriceDesc = [...products].sort((a, b) => b.price - a.price);
   const stockPriceAsc = [...products].sort((a, b) => a.price - b.price);
 
-  const handleClick = () => {
+  const handleFilter = () => {
+    //Opens or closes the filter modal
     setFilter(!filter);
   };
 
   useEffect(() => {
-    //resets sorting value if a filter is applied/removed.
+    //resets sorting value if a filter is applied/removed incase user filters after having sorted.
     if (selectRef.current) {
       selectRef.current.value = "none";
     }
@@ -169,7 +174,7 @@ const SortProducts = () => {
           />
         ) : (
           <img
-            onClick={handleClick}
+            onClick={handleFilter}
             className="w-[12.5%] max-w-[165px] hover:opacity-65 cursor-pointer"
             src="Filter-Button.svg"
             alt="filter"

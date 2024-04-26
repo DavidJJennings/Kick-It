@@ -2,11 +2,12 @@ import { ReactNode, createContext } from "react";
 import stock from "../Data/stock.json";
 import { useState } from "react";
 
-type Product = (typeof stock)[1];
+type Product = (typeof stock)[1]; //Specify product type to be an item in the stock data file.
 
-type Basket = Product[];
+type Basket = Product[]; // Basket will be an array of the products.
 
 type BasketContextType = {
+  //Specifying the types for all the states that are going to be given with this context.
   basket: Product[] | [];
   addToBasket: (product: (typeof stock)[1]) => void;
   removeFromBasket: (productId: number) => void;
@@ -14,11 +15,13 @@ type BasketContextType = {
   setError: React.Dispatch<React.SetStateAction<string>>;
 };
 
-interface MyProviderProps {
+type MyProviderProps = {
+  //Type the nodes that we will be wrapping with our context.
   children: ReactNode;
-}
+};
 
 const BasketContext = createContext<BasketContextType>({
+  //Creation of the initial basket context.
   basket: [],
   addToBasket: () => {},
   removeFromBasket: () => {},
@@ -33,12 +36,13 @@ export const BasketContextProvider: React.FC<MyProviderProps> = ({
   const [basket, setBasket] = useState<Basket>([]);
   const addToBasket = (product: Product) => {
     if (basket.some((trainer) => trainer.id === product.id)) {
+      // Sets error if user attempts to add the same trainer to the basket twice.
       setError(
         "In order to prevent the bulk buying and reselling of collectors items, users are limitted to purchasing 1 of each item at a time."
       );
       return;
     }
-    setBasket([...basket, product]);
+    setBasket([...basket, product]); // Otherwise it adds the product to the basket.
   };
 
   const removeFromBasket = (productId: number) => {
