@@ -40,7 +40,7 @@ const AllProductsGallery = () => {
               key={trainer.id}
               to={`/item/${trainer.id}`}
             >
-              <div className="flex flex-col justify-between text-center items-center mb-4 h-full w-full text-[0.7rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
+              <div className="flex flex-col justify-between text-center items-center mb-4 h-full w-full text-[0.5rem] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl ">
                 <div className="w-full h-2/5 flex justify-center items-center">
                   <img
                     className="object-contain h-full w-full max-w-[85%]"

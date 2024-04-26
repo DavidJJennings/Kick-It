@@ -33,7 +33,10 @@ const AddToBasketBtn = (props: Props) => {
 
   return (
     <div className="w-full flex justify-center">
-      <button onClick={handleClick} className="hover:opacity-65 w-3/5 mx-auto">
+      <button
+        onClick={handleClick}
+        className="hover:opacity-65 w-16 xs:w-20 sm:w-24 lg:w-28 xl:w-36 2xl:w-40"
+      >
         <img src="/Add-ToBasket-Btn.svg" alt="" />
       </button>
     </div>
