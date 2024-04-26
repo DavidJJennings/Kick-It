@@ -32,11 +32,6 @@ const Nav = () => {
             KICK IT
           </h2>
         </Link>
-
-        <input
-          className="rounded-2xl px-1 hidden w-10 xs:w-14 sm:w-24 sm:block h-3 sm:h-5 md:w-32 lg:h-8 lg:w-48"
-          type="text"
-        />
       </div>
 
       <ul className="col-span-4 row-span-1 p-1 flex text-white justify-between xs:justify-center xs:gap-x-4 md:gap-x-6 md:py-4 xl:gap-x-8 2xl:gap-x-12 items-center text-center">
@@ -75,6 +70,7 @@ const Nav = () => {
 
         <button
           onClick={handleMenu}
+          aria-label="Menu"
           className="flex flex-col justify-center h-4 sm:h-5 md:h-6 lg:h-7 xl:h-9 aspect-square z-50"
         >
           <span
